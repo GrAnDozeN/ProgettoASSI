@@ -1,0 +1,20 @@
+%h2 Create a new music
+
+= form_tag music_path(@music), :method => :put do
+
+    = label :music, :title, 'Title'
+    = text_field :music, :title
+
+    =label :music, :author, 'Author'
+    =text_field :music, :author
+
+    =label :music, :album, 'Album'
+    =text_field :music, :album
+
+    =label :music, :genre, 'Genre'
+    =select :music, :genre, ['Rock', 'Jazz', 'Metal', 'Pop', 'Electronic','Rap']
+
+    =label :music, :Year, 'Year'
+    =text_field :music, :year
+
+    =submit_tag 'Save Changes'
