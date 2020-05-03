@@ -7,7 +7,7 @@ skip_before_action :verify_authenticity_token
 
 	def create
 		@music = Music.create!(params[:music].permit(:title,:author,:album,:genre,:year))
-		redirect_to music_path
+		redirect_to music_index_path
 	end
 
 	def show
@@ -26,19 +26,15 @@ skip_before_action :verify_authenticity_token
 		id = params[:id]
 		@music = Music.find(id)
 		@music.destroy
-		redirect_to music_path(@music)
+		redirect_to music_index_path
 	end
 
 	def update
-		if Music.exists?(id = params[:id])
-			@music = Music.find(id)
-			@music.update_attributes!(params[:music].permit(:title, :author, :album, :genre, :year))
-			redirect_to music_path(@music)
-		else
-			@music = Music.create!(params[:music].permit(:title,:author,:album,:genre,:year)) # RISOLVERE LA REDIRECT (UPDATE
-			redirect_to music_path(@music)							  # INVECE DI NEW)
-		end
-	end
+        id = params[:id]
+		@music = Music.find(id)
+		@music.update_attributes!(params[:music].permit(:title, :author, :album, :genre, :year))
+        redirect_to music_path(@music)
+    end
 
 	def edit
 		id = params[:id]
