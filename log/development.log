@@ -3521,3 +3521,59 @@ Processing by MusicController#index as HTML
 Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-04 12:22:38 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 35ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-04 12:22:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (6.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (41.4ms)
+Completed 200 OK in 512ms (Views: 502.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-04 12:22:45 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music/5" for 127.0.0.1 at 2020-05-04 12:22:48 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMusic Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:16
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/5/edit" for 127.0.0.1 at 2020-05-04 12:22:50 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:41
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-04 12:22:53 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
