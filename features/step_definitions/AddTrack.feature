@@ -8,6 +8,7 @@ Scenario: Add a track
   And I fill in "Author" with "Led Zeppelin"
   And I fill in "Album" with "Led Zeppelin IV"
   And I select "Rock" from "Genre"
+  And I fill in "Year" with "1971"
   And I press "Save Changes"
   Then I should be on the Musicman home page
   And I should see "Stairway to haeven"
