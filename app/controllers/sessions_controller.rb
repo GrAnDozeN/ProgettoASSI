@@ -8,9 +8,10 @@ class SessionsController < ApplicationController
 
 	def create
 		name = params[:user][:name]
-		@users = Musicgoer.where(:name => name)
+		pass = params[:user][:password]
+		@users = Musicgoer.where(:name => name, :password => pass)
 		if @users.length>0
-			session[:user_id]='1'
+			session[:user_id]=@users.ids[0]
 			redirect_to music_index_path
 		else
 			redirect_to login_path
@@ -19,6 +20,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session.delete(:user_id)
+		redirect_to login_path
 	end
 
 end

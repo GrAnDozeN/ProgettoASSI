@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 	#post ('/music/new') => "music#create"
 	get '/callback' => "sessions#create"
 	get '/login' => "sessions#login"
+	get '/logout' => "sessions#destroy"
 	resources :music
 end

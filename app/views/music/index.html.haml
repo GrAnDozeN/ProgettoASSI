@@ -1,22 +1,34 @@
-%h1 All Musics
-
-%table#music
-  %thead
-    %tr
-      %th Track
-      %th Author
-      %th Album
-      %th Genre
-      %th Year
-  %tbody
-    - @musics.each do |music|
+-#Navigation Bar
+%nav.navbar.navbar-dark.bg-dark
+  %a{:style=>'color: white', :href=>'#'} Logo
+  -#Elemento a destra
+  %div
+    -#Mostra il nome dell'utente
+    %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+    -#Mostra il bottone per il Logout
+    %button.btn{:style=>'background-color: white; margin-left: 10px'} #{link_to 'Logout', logout_path}
+-#Body
+%div.container{:style=>'margin:0; margin-top: 10px'}
+  %h1 All Musics
+  -#Aggiunta classe Table, per visualizzare una Tabella
+  %table.table#music  
+    %thead
       %tr
-        %td= music.title
-        %td= music.author 
-        %td= music.album 
-        %td= music.genre 
-        %td= music.year 
-        %td= link_to "Details", music_path(music)
-</div>
-#{link_to 'Add new track', new_music_path} - #{link_to 'Login', login_path}
-</div>
+        %th Track
+        %th Author
+        %th Album
+        %th Genre
+        %th Year
+    %tbody
+      - @musics.each do |music|
+        %tr
+          %td= music.title
+          %td= music.author 
+          %td= music.album 
+          %td= music.genre 
+          %td= music.year 
+          %td= link_to "Details", music_path(music)
+  -#Bottoni per riindirizzamenti
+  %button.btn{:style=>'background-color: grey'} #{link_to 'Add new track', new_music_path, {:style=>'color: white'}}
+  -
+  %button.btn{:style=>'background-color: grey'} #{link_to 'Login', login_path, {:style=>'color: white'}}

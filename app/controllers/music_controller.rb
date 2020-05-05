@@ -3,6 +3,7 @@ skip_before_action :verify_authenticity_token
 
 	def index
 		@musics = Music.all
+		@currentUser = Musicgoer.find(session[:user_id])
 	end
 
 	def create

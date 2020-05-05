@@ -14,8 +14,9 @@ ActiveRecord::Schema.define(version: 2020_05_04_102550) do
 
   create_table "musicgoers", force: :cascade do |t|
     t.string "name"
-    t.string "string"
+    t.string "password"
     t.string "provider"
+    t.string "string"
     t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -4181,3 +4181,2912 @@ Processing by MusicController#index as HTML
 Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-05 17:49:59 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/grandozen/.rvm/gems/ruby-2.6.5/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2020-05-05 17:50:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 17:50:21 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 17:50:21 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 1105ms (Views: 1103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=&commit=Login" for 127.0.0.1 at 2020-05-05 17:50:33 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.5ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/music
+Completed 302 Found in 39ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 17:50:33 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.5ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 17:50:41 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 17:50:43 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 17:50:47 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusics (20200429133545)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "album" varchar, "genre" varchar, "year" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200429133545_create_musics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200429133545"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusicgoers (20200504102550)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "musicgoers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "provider" varchar, "string" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200504102550_create_musicgoers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200504102550"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-05 16:04:47.389052"], ["updated_at", "2020-05-05 16:04:47.389052"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:05:00 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 216ms (Views: 207.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:05:06 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:05:11 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=ad&user%5Bpassword%5D=&commit=Login" for 127.0.0.1 at 2020-05-05 18:05:14 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"ad", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "ad"]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:05:14 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=&commit=Login" for 127.0.0.1 at 2020-05-05 18:05:17 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:05:17 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:15:22 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (2.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (23.8ms)
+Completed 200 OK in 313ms (Views: 303.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-05 18:15:25 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-05 18:15:57 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yfy0md5UqqVLOECKDlQkF5Uzi5Ma7UQo8KKau0aFxy7a9NdQ8za+nSLSH1Yq8UlsP5IOyIChRGRpFCS51WGP1g==", "music"=>{"title"=>"Track X", "author"=>"Author X", "album"=>"Album X", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:9
+  [1m[36mMusic Create (0.3ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Track X"], ["author", "Author X"], ["album", "Album X"], ["genre", "Rock"], ["year", "1990"], ["created_at", "2020-05-05 16:15:57.512688"], ["updated_at", "2020-05-05 16:15:57.512688"]]
+  ↳ app/controllers/music_controller.rb:9
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:9
+Redirected to http://localhost:3000/music
+Completed 302 Found in 18ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:15:57 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.4ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusics (20200429133545)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "album" varchar, "genre" varchar, "year" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200429133545_create_musics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200429133545"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusicgoers (20200504102550)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "musicgoers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "provider" varchar, "string" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200504102550_create_musicgoers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200504102550"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-05 16:21:45.575164"], ["updated_at", "2020-05-05 16:21:45.575164"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mMusicgoer Load (0.4ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicgoer Create (0.9ms)[0m  [1m[32mINSERT INTO "musicgoers" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "admin"], ["password", "admins"], ["created_at", "2020-05-05 16:23:19.223152"], ["updated_at", "2020-05-05 16:23:19.223152"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:25:04 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/sessions_controller.rb:12: syntax error, unexpected =>, expecting ')'
+...e(:name => name && :password => pass)
+...                             ^~):
+  
+app/controllers/sessions_controller.rb:12: syntax error, unexpected =>, expecting ')'
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:32:58 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 262ms (Views: 257.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=a&user%5Bpassword%5D=&commit=Login" for 127.0.0.1 at 2020-05-05 18:33:01 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "a"], ["password", ""]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:33:01 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:33:03 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", ""], ["password", "ad"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:33:03 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:33:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:33:38 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:33:42 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:33:42 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:33:50 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:33:50 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:35:18 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:35:18 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (29.4ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=ad&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:36:04 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"ad", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `param' for #<SessionsController:0x00007fc9216166a0>
+Did you mean?  params
+               params=):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=ad&user%5Bpassword%5D=&commit=Login" for 127.0.0.1 at 2020-05-05 18:36:15 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"ad", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "ad"], ["password", ""]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:36:15 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:36:32 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:36:32 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:37:29 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admins"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 28ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:37:29 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:23: syntax error, unexpected ')'
+...tml_escape((link_to 'Logout', ))}"
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:24: syntax error, unexpected backslash, expecting ')'
+....to_s);; _hamlout.buffer << ("\n".freeze);::Haml::Util.html_...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:27: unterminated string meets end of file
+          end
+              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:27: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/music/index.html.haml:23: syntax error, unexpected ')'
+app/views/music/index.html.haml:24: syntax error, unexpected backslash, expecting ')'
+app/views/music/index.html.haml:27: unterminated string meets end of file
+app/views/music/index.html.haml:27: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:39:50 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 212ms (Views: 210.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 18:39:52 +0200
+  
+ActionController::RoutingError (uninitialized constant SessionController):
+  
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 18:40:07 +0200
+  
+ActionController::RoutingError (uninitialized constant SessionController):
+  
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 18:40:26 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant SessionController):
+  
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 18:40:41 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:40:41 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 209ms (Views: 208.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:40:46 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:40:46 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:40:51 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:40:51 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMusicgoer Load (0.6ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicgoer Create (2.9ms)[0m  [1m[32mINSERT INTO "musicgoers" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "guest"], ["password", "guest"], ["created_at", "2020-05-05 16:43:33.333071"], ["updated_at", "2020-05-05 16:43:33.333071"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "admin"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicgoer Update (0.5ms)[0m  [1m[33mUPDATE "musicgoers" SET "password" = ?, "updated_at" = ? WHERE "musicgoers"."id" = ?[0m  [["password", "admin"], ["updated_at", "2020-05-05 16:45:05.612434"], ["id", 1]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:45:27 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "guest"], ["password", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:45:27 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:45:32 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:45:34 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 18:45:36 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:45:36 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:45:38 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 18:45:38 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 18:45:44 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:45:44 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:12
+  Rendered music/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:49:46 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:49:52 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:49:55 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:50:14 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:50:15 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:50:27 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 18:50:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:03:32 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 6762ms (Views: 6755.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:03:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:03:46 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:04:06 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.5ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 21ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:04:06 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 19:04:09 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:04:09 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:05:49 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 2708ms (Views: 2706.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:06:34 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 2740ms (Views: 2738.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:06:51 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 2687ms (Views: 2686.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:06:57 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:06:57 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:08:37 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 783ms (Views: 781.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:08:42 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:08:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:13
+  Rendered music/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:09:25 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:09:26 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:09:35 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:10:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:1: syntax error, unexpected =>
+...lout.attributes({}, nil,class=>'navbar navbar-expand-lg navb...
+...                             ^~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:1: syntax error, unexpected ')', expecting end
+...lg navbar-dark br-dark')).to_s);; _hamlout.buffer << ("></di...
+...                              ^):
+  
+app/views/music/index.html.haml:1: syntax error, unexpected =>
+app/views/music/index.html.haml:1: syntax error, unexpected ')', expecting end
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:10:54 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:11:05 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:12:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:12:10 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:12:43 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:13:40 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:14:15 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:15:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:14
+  Rendered music/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:15:35 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:15:43 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:18:26 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:19:43 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 2653ms (Views: 2651.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:20:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 2601ms (Views: 2599.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 19:22:33 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:22:33 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:23:17 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.7ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:23:18 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:23:36 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:23:55 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:24:02 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:24:15 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:24:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 108ms (Views: 107.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:27:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:27:38 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:27:44 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:27:50 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:27:55 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:28:16 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:28:32 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:28:47 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:28:48 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:29:09 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:29:14 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:29:45 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:30:13 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:30:28 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:33:11 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:33:16 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 101ms (Views: 99.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:33:22 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:36:29 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:36:34 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:36:35 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:36:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:36:56 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:14 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (8.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 63ms (Views: 53.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:32 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:45 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:47 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:49 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:51 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:37:56 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 63ms (Views: 62.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:39:21 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:16
+  Rendered music/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:39:42 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:40:00 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:40:01 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 51ms (Views: 45.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:40:46 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:03 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 60ms (Views: 59.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:04 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:25 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:26 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:27 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:51 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:41:52 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 121ms (Views: 119.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:42:07 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:18
+  Rendered music/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:42:26 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:18
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 19:42:28 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:42:28 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:42:32 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (7.3ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 9ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:42:32 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:18
+  Rendered music/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:43:54 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:44:13 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:44:17 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:44:17 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started PUT "/__web_console/repl_sessions/23185b07117dce24fe5e637252ae1cc5" for 127.0.0.1 at 2020-05-05 19:44:31 +0200
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:44:41 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "guest"], ["LIMIT", 11]]
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:46:05 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:46:07 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:48:01 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Music Load (0.0ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Music Load (0.0ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `user_id' for #<MusicController:0x00007fb21f6c14d8>):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:48:14 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Music Load (0.0ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Music Load (0.0ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `user_id' for #<MusicController:0x00007fb220808d68>):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:48:23 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Music Load (0.0ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `user_id' for #<ActionDispatch::Request::Session:0x00007fb21cf47a60>):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:49:06 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:18
+  Rendered music/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:49:35 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:50:05 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:20
+  Rendered music/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:51:58 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:07 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:12 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 19:52:18 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:52:18 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:22 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 19:52:22 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 19:52:25 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:26 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:47 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:52:49 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:53:16 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 103ms (Views: 102.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:53:24 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:53:25 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:53:49 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:54:02 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:54:10 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:54:17 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:54:24 +0200
+Processing by MusicController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusicController::Moviegoer):
+  
+app/controllers/music_controller.rb:6:in `index'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:54:39 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:10 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:21 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:31 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/music/index.html.haml:9
+  Rendered music/index.html.haml within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+     6: %div.container{:style=>'margin:0'}
+     7:   %h1 All Musics
+     8: 
+     9:   #{@currentUser[:name]}
+    10:   %table#music
+    11:     %thead
+    12:       %tr
+  
+app/views/music/index.html.haml:9:in `_app_views_music_index_html_haml__860530252814280988_70201495625060'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:43 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 19:55:51 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+  ↳ /home/grandozen/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered music/index.html.haml within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<Musicgoer::ActiveRecord_Relation:0x00007fb21f2d15d0>):
+     6: %div.container{:style=>'margin:0'}
+     7:   %h1 All Musics
+     8: 
+     9:   #{@currentUser.password}
+    10:   %table#music
+    11:     %thead
+    12:       %tr
+  
+app/views/music/index.html.haml:9:in `_app_views_music_index_html_haml__860530252814280988_70201501990820'
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ?[0m  [["id", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "admin"]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers"."name" FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "musicgoers"."id" FROM "musicgoers" WHERE "musicgoers"."name" = ?[0m  [["name", "admin"]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? LIMIT ?[0m  [["name", "admin"], ["LIMIT", 11]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" ORDER BY "musicgoers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? ORDER BY "musicgoers"."id" ASC LIMIT ?[0m  [["name", "admin"], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? ORDER BY "musicgoers"."id" ASC LIMIT ?[0m  [["name", "admin"], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:17:34 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:6: syntax error, unexpected ']', expecting ')'
+...Musicgoer.find(session:user_id])
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:44: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:6: syntax error, unexpected ']', expecting ')'
+app/controllers/music_controller.rb:44: syntax error, unexpected end-of-input, expecting end
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:17:53 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:19
+  Rendered music/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 79ms (Views: 59.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:18:24 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:18:39 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:19:00 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.4ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:19:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-05 20:21:18 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:23:00 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 3026ms (Views: 3024.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:24:58 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:25:07 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:25:37 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:25:45 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:26:12 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:26:53 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 2687ms (Views: 2671.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:28:04 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:29:07 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (41.2ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:30:49 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 2705ms (Views: 2703.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:31:39 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:31:54 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:32:03 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:32:26 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:32:39 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 140ms (Views: 137.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:33:00 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:33:02 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:33:02 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 20:33:08 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "guest"], ["password", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:33:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:33:19 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:33:19 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 20:33:23 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "guest"], ["password", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:33:23 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:33:25 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:33:25 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 20:33:57 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "guest"], ["password", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:33:57 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:35:16 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:35:16 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     5: 
+     6: = form_tag callback_path(), :method => :get do
+     7: 
+     8:     = label :user, :name, 'User Name'
+     9:     = text_field :user, :name
+    10: 
+    11:     = label :user, :password, 'Password'
+  
+app/views/sessions/login.html.haml:8
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:35:39 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:35:39 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    1: %nav.navbar.navbar-dark.bg-dark
+    2:   %a{:style=>'color: white', :href=>'#'} Logo
+    3: %div.container
+    4:     %h2 Musicman login 
+    5:     
+    6:     = form_tag callback_path(), :method => :get do
+    7:     
+  
+app/views/sessions/login.html.haml:4
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:36:02 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    1: %nav.navbar.navbar-dark.bg-dark
+    2:   %a{:style=>'color: white', :href=>'#'} Logo
+    3: %div.container
+    4:     %h2 Musicman login 
+    5:     
+    6:     = form_tag callback_path(), :method => :get do
+    7:     
+  
+app/views/sessions/login.html.haml:4
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:36:26 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 2677ms (Views: 2675.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:36:50 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:37:08 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 118ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:37:19 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 20:38:08 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:38:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-05 20:38:11 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-05 20:38:12 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-05 20:38:51 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:38:51 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    22:           %td= music.genre 
+    23:           %td= music.year 
+    24:           %td= link_to "Details", music_path(music)
+    25:   %button.btn#{link_to 'Add new track', new_music_path} - 
+    26:   %button.btn#{link_to 'Login', login_path}
+  
+app/views/music/index.html.haml:25
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:38:58 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    22:           %td= music.genre 
+    23:           %td= music.year 
+    24:           %td= link_to "Details", music_path(music)
+    25:   %button.btn#{link_to 'Add new track', new_music_path} 
+    26:   %button.btn#{link_to 'Login', login_path}
+  
+app/views/music/index.html.haml:25
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:39:05 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:39:12 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:39:29 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:40:02 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:25: syntax error, unexpected tSTRING_BEG, expecting ')'
+...({"class"=>"btn"}, nil,:style='backgroud-color: grey')).to_s...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:25: syntax error, unexpected ')', expecting end
+...'backgroud-color: grey')).to_s);; _hamlout.buffer << (">".fr...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:27: syntax error, unexpected tSTRING_BEG, expecting ')'
+...({"class"=>"btn"}, nil,:style='backgroud-color: grey')).to_s...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:27: syntax error, unexpected ')', expecting end
+...'backgroud-color: grey')).to_s);; _hamlout.buffer << (">".fr...
+...                              ^):
+  
+app/views/music/index.html.haml:25: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/music/index.html.haml:25: syntax error, unexpected ')', expecting end
+app/views/music/index.html.haml:27: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/music/index.html.haml:27: syntax error, unexpected ')', expecting end
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:40:13 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:40:19 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:40:41 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:41:33 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:41:46 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-05 20:41:51 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-05 20:42:02 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3l8ktLgbEoTwoshcKl73VXtlXCbrzTk6em9xJDRc4lnNV0d9lXkGvJlIl4AO+5ou0cTZfXGBOXbj2c8mp7iqoQ==", "music"=>{"title"=>"Titolo", "author"=>"autore", "album"=>"album", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (3.5ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Titolo"], ["author", "autore"], ["album", "album"], ["genre", "Rock"], ["year", "1990"], ["created_at", "2020-05-05 18:42:02.828159"], ["updated_at", "2020-05-05 18:42:02.828159"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 29ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:42:02 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:42:54 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:43:05 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:43:13 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:44:00 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:44:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:45:12 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-05 20:45:15 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:45:39 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:46:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  Rendered music/index.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:25: syntax error, unexpected =>, expecting '}'
+... track', new_music_pa {:style=>'color: white'}))}"
+...                             ^~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:25: syntax error, unexpected '}', expecting ')'
+...sic_pa {:style=>'color: white'}))}"
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:28: unknown regexp options - btt
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:28: syntax error, unexpected backslash
+..._hamlout.buffer << ("</button>\n</div>\n".freeze);::Haml::Ut...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:31: unterminated regexp meets end of file
+          end
+              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:31: unmatched close parenthesis: /div>\n".freeze);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+/m
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/index.html.haml:31: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/music/index.html.haml:25: syntax error, unexpected =>, expecting '}'
+app/views/music/index.html.haml:25: syntax error, unexpected '}', expecting ')'
+app/views/music/index.html.haml:28: unknown regexp options - btt
+app/views/music/index.html.haml:28: syntax error, unexpected backslash
+app/views/music/index.html.haml:31: unterminated regexp meets end of file
+app/views/music/index.html.haml:31: unmatched close parenthesis: /div>\n".freeze);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+app/views/music/index.html.haml:31: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:46:28 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:49:41 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-05 20:49:51 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-05 20:50:10 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpBSdusW/QOqljPzPbe985xEDtCX4DWTvAUZa7SNFyJFmDG/xnTpO8N8bC8ZEtCINuWLiw2sNd8ls6dpJ2lf2g==", "music"=>{"title"=>"Secondo", "author"=>"Auth", "album"=>"Albuim", "genre"=>"Rock", "year"=>"2999"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (1.5ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Secondo"], ["author", "Auth"], ["album", "Albuim"], ["genre", "Rock"], ["year", "2999"], ["created_at", "2020-05-05 18:50:10.671628"], ["updated_at", "2020-05-05 18:50:10.671628"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 16ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-05 20:50:10 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:17
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
