@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 	#get ('music') => redirect('/')
 	#post ('/music/:id') => "music#update"
 	#post ('/music/new') => "music#create"
+	get '/callback' => "sessions#create"
+	get '/login' => "sessions#login"
 	resources :music
 end

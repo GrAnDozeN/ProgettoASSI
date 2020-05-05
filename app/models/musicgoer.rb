@@ -1,0 +1,2 @@
+class Musicgoer < ApplicationRecord
+end
