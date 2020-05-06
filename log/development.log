@@ -8769,3 +8769,3101 @@ Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
 
 
   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/new" for 127.0.0.1 at 2020-05-06 16:59:20 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 16:59:29 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    3:     %a{:style=>'color: white', :href=>'#'} Logo
+    4:     -#Elemento a destra
+    5:     %div
+    6:       -#Mostra il nome dell'utente
+    7:       %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+    8:       -#Mostra il bottone per il Logout
+    9:       %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+  
+app/views/music/new.html.haml:6
+Started GET "/music" for 127.0.0.1 at 2020-05-06 16:59:48 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 275ms (Views: 258.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 16:59:50 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    3:     %a{:style=>'color: white', :href=>'#'} Logo
+    4:     -#Elemento a destra
+    5:     %div
+    6:       -#Mostra il nome dell'utente
+    7:       %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+    8:       -#Mostra il bottone per il Logout
+    9:       %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+  
+app/views/music/new.html.haml:6
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:00:13 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:     -#Elemento a destra
+    5:     %div
+    6:         -#Mostra il nome dell'utente
+    7:         %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+    8:         -#Mostra il bottone per il Logout
+    9:         %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+   10: 
+  
+app/views/music/new.html.haml:7:in `_app_views_music_new_html_haml___3726744411287077253_70031937281380'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:02:15 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:09:04 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:11:52 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:12:42 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:12:56 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:13:24 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:13:48 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:15:43 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:16: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:34: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/music/new.html.haml:16: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/music/new.html.haml:34: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:15:56 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:34: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/music/new.html.haml:34: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:16:30 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:35: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/music/new.html.haml:35: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:17:02 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:17:26 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:18:03 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:18:20 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:18:57 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:19:08 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmX/xz00fTlsHua4r5VagL9ip0mvqpmRxLQQh1wUbUGevqBUkNVKkRX8vbqwAmthQLKvrAsQc4SNUsSYBfBu0g==", "music"=>{"title"=>"", "author"=>"", "album"=>"", "genre"=>"Rock", "year"=>""}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (2.1ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["author", ""], ["album", ""], ["genre", "Rock"], ["year", ""], ["created_at", "2020-05-06 15:19:08.401608"], ["updated_at", "2020-05-06 15:19:08.401608"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 19ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:19:08 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/4" for 127.0.0.1 at 2020-05-06 17:19:11 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/4" for 127.0.0.1 at 2020-05-06 17:19:15 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/music/4" for 127.0.0.1 at 2020-05-06 17:19:16 +0200
+Processing by MusicController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FkSYRvNHXCvmr6nauUs3wZ4Aut3VfdYpe1t7kMnPGM8Wn8fVXqZrg59N8tim3AYgYdCyOHHHPDwyva+PkCsbXA==", "id"=>"4"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:31
+  [1m[36mMusic Destroy (1.0ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/music_controller.rb:31
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:31
+Redirected to http://localhost:3000/music
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:19:16 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:19:45 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:19:51 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXZblujeJQi2bO3EpAkXGbSRZVL3/aiuvkPPQRb2xDZWfjhfxbwxMN+GshiArHpiHjDgCW2xqOIn9XFDhRKMzg==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"", "genre"=>"Rock", "year"=>"1"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["author", "ad"], ["album", ""], ["genre", "Rock"], ["year", "1"], ["created_at", "2020-05-06 15:19:51.253451"], ["updated_at", "2020-05-06 15:19:51.253451"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/5
+Completed 302 Found in 34ms (ActiveRecord: 21.3ms)
+
+
+Started GET "/music/5" for 127.0.0.1 at 2020-05-06 17:19:51 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/5/reviews/new" for 127.0.0.1 at 2020-05-06 17:22:26 +0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"music_id"=>"5"}
+  Rendering reviews/new.html.haml within layouts/application
+  Rendered reviews/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:22:30 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:49: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:49: syntax error, unexpected end-of-input, expecting end
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:22:38 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 56ms (Views: 35.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:22:41 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:28
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:22:42 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHzoXlmzytZOw3A/GPyniidMV4nlGt2B26jr95g/zyqDdIuXdNHe7icpL+M8Wcrxje3S0n9W3c1CHlX1C9uH0g==", "music"=>{"title"=>"", "author"=>"", "album"=>"", "genre"=>"Rock", "year"=>""}, "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/music
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["author", ""], ["album", ""], ["genre", "Rock"], ["year", ""], ["created_at", "2020-05-06 15:22:42.824597"], ["updated_at", "2020-05-06 15:22:42.824597"]]
+  ↳ app/controllers/music_controller.rb:13
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+Redirected to 
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 5.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/music_controller.rb:14:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:23:10 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: else without rescue is useless
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:52: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/music_controller.rb:13: else without rescue is useless
+app/controllers/music_controller.rb:52: syntax error, unexpected end, expecting end-of-input
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:23:50 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:10: syntax error, unexpected ':', expecting ']'
+		if !params[:music:title]
+		                 ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: else without rescue is useless
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:17: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/music_controller.rb:10: syntax error, unexpected ':', expecting ']'
+app/controllers/music_controller.rb:13: else without rescue is useless
+app/controllers/music_controller.rb:17: syntax error, unexpected end, expecting end-of-input
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:24:12 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: else without rescue is useless
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:52: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/music_controller.rb:13: else without rescue is useless
+app/controllers/music_controller.rb:52: syntax error, unexpected end, expecting end-of-input
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:24:49 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHzoXlmzytZOw3A/GPyniidMV4nlGt2B26jr95g/zyqDdIuXdNHe7icpL+M8Wcrxje3S0n9W3c1CHlX1C9uH0g==", "music"=>{"title"=>"", "author"=>"", "album"=>"", "genre"=>"Rock", "year"=>""}, "commit"=>"Save Changes"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["author", ""], ["album", ""], ["genre", "Rock"], ["year", ""], ["created_at", "2020-05-06 15:24:49.862428"], ["updated_at", "2020-05-06 15:24:49.862428"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 15ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-05-06 17:24:49 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 47ms (Views: 25.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:25:25 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:18: syntax error, unexpected '\n', expecting =>
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+...t.buffer << ("\n".freeze);; end;; _hamlout.buffer << ((::Ham...
+...                            ^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected ensure, expecting ')'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                         ^~~~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+...uffer.upper if @haml_buffer;end;
+...                            ^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:41: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/music/new.html.haml:18: syntax error, unexpected '\n', expecting =>
+app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+app/views/music/new.html.haml:38: syntax error, unexpected ensure, expecting ')'
+app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+app/views/music/new.html.haml:41: syntax error, unexpected end, expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:25:34 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:18: syntax error, unexpected '\n', expecting =>
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+...t.buffer << ("\n".freeze);; end;; _hamlout.buffer << ((::Ham...
+...                            ^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected ensure, expecting ')'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                         ^~~~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+...uffer.upper if @haml_buffer;end;
+...                            ^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:41: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/music/new.html.haml:18: syntax error, unexpected '\n', expecting =>
+app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+app/views/music/new.html.haml:38: syntax error, unexpected ensure, expecting ')'
+app/views/music/new.html.haml:38: syntax error, unexpected end, expecting ')'
+app/views/music/new.html.haml:41: syntax error, unexpected end, expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:25:41 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:26:16 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:26:27 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2Z05HPkwLuP2BBKgVSXNiZc+UMk8wF0VBDWUdxomQmPvSt33gX3E/Y6S0iew6bX2YzxpoBJ62Ed9gJOhYyamg==", "music"=>{"title"=>"Titolo", "author"=>"auto", "album"=>"alb", "genre"=>"Pop", "year"=>"1002"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (0.4ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Titolo"], ["author", "auto"], ["album", "alb"], ["genre", "Pop"], ["year", "1002"], ["created_at", "2020-05-06 15:26:27.286351"], ["updated_at", "2020-05-06 15:26:27.286351"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/8
+Completed 302 Found in 9ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/music/8" for 127.0.0.1 at 2020-05-06 17:26:27 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:26:29 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:26:32 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:26:35 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:27:08 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:30:57 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:31:07 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:31:27 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:31:36 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:31:47 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:32:02 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:32:15 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:32:26 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:32:27 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:34:31 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:34:32 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:34:42 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:35:01 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:35:02 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:35:55 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:42:07 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 52ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:42:08 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:42:38 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:42:52 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:43:12 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:43:36 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:46:20 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:47:12 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:47:58 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:48:07 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:49:23 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:49:24 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:50:12 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:50:40 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:51:04 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:53:57 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...pe((( number_field_tag, :music, :year, class:'form-control',...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+...c, :year, class:'form-control', style:'max-width: 500px; mar...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+...-left:auto; margin-right:auto', required:'true'
+...                              ^):
+  
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:53:58 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...pe((( number_field_tag, :music, :year, class:'form-control',...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+...c, :year, class:'form-control', style:'max-width: 500px; mar...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+...-left:auto; margin-right:auto', required:'true'
+...                              ^):
+  
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+app/views/music/new.html.haml:36: syntax error, unexpected ',', expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:54:06 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:54:29 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v9ilEcUlnXN/SltoD9nSkl7oFMlsEGfFm3J8GS7AaSS/A/qCaMSq2waoAGoQTuNzoTgcLMiqjdDSlKgGdyRqtw==", "music"=>"2008", "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "2008":String):
+  
+app/controllers/music_controller.rb:10:in `create'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:54:47 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (54.1ms)
+Completed 200 OK in 91ms (Views: 89.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 17:54:50 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:54:53 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 17:55:06 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlGOsDRc/m6XG0VfoL/2J5TECPwydCGZvzAEtxN5ccodWe15GT7qVv7xGoOEGptcPmWNp6g4IdUmhrq1gJ05Mg==", "music"=>{"title"=>"ca", "author"=>"ca", "album"=>"ca", "genre"=>"Jazz", "year"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (1.1ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ca"], ["author", "ca"], ["album", "ca"], ["genre", "Jazz"], ["year", "123"], ["created_at", "2020-05-06 15:55:06.313350"], ["updated_at", "2020-05-06 15:55:06.313350"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/9
+Completed 302 Found in 9ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/music/9" for 127.0.0.1 at 2020-05-06 17:55:06 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:56:06 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:56:37 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:56:44 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:56:55 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:56:56 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:57:10 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:01 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:10 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:19 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:29 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:40 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:58:48 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 17:59:35 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:02:38 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:02:39 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:03:44 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:03:45 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:03:56 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:13:41 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:14:00 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:14:39 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into String):
+    15:         = form_tag music_index_path, :method => :post do
+    16: 
+    17:             %div.form-group
+    18:                 = label :music, :title, 'Title', style="text-weight: bold"
+    19:                 = text_field :music, :title, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto', required:'true'
+    20: 
+    21: 
+  
+app/views/music/new.html.haml:18:in `block in _app_views_music_new_html_haml___3726744411287077253_70032229319440'
+app/views/music/new.html.haml:15:in `_app_views_music_new_html_haml___3726744411287077253_70032229319440'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:14:45 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:15:08 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:15:24 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.5ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:18:33 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:28
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:18:37 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oMBNEUIeh4ZT9vetiFrnKYPYq6TCKNR3xk7Xn6jt4ToVOXfPUWQAGHZG1lT7RPjUg1bx72yJgOmrDyIB6NTQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"ad"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `permit' for #<MusicController:0x00007f634c523a30>
+Did you mean?  print):
+  
+app/controllers/music_controller.rb:10:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:20:22 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oMBNEUIeh4ZT9vetiFrnKYPYq6TCKNR3xk7Xn6jt4ToVOXfPUWQAGHZG1lT7RPjUg1bx72yJgOmrDyIB6NTQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"ad"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `permit' for #<MusicController:0x00007f6329118ff8>
+Did you mean?  print):
+  
+app/controllers/music_controller.rb:10:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:20:34 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oMBNEUIeh4ZT9vetiFrnKYPYq6TCKNR3xk7Xn6jt4ToVOXfPUWQAGHZG1lT7RPjUg1bx72yJgOmrDyIB6NTQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"ad"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+  [1m[36mMusic Create (0.5ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["author", "ad"], ["album", "ad"], ["genre", "Rock"], ["year", "ad"], ["created_at", "2020-05-06 16:20:34.318185"], ["updated_at", "2020-05-06 16:20:34.318185"]]
+  ↳ app/controllers/music_controller.rb:13
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+Redirected to http://localhost:3000/music/10
+Completed 302 Found in 28ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/music/10" for 127.0.0.1 at 2020-05-06 18:20:34 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  [1m[36mMusic Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:20
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 87ms (Views: 70.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:20:58 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oMBNEUIeh4ZT9vetiFrnKYPYq6TCKNR3xk7Xn6jt4ToVOXfPUWQAGHZG1lT7RPjUg1bx72yJgOmrDyIB6NTQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"ad"}, "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/music
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["author", "ad"], ["album", "ad"], ["genre", "Rock"], ["year", "ad"], ["created_at", "2020-05-06 16:20:59.030334"], ["updated_at", "2020-05-06 16:20:59.030334"]]
+  ↳ app/controllers/music_controller.rb:13
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:13
+Redirected to 
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.1ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/music_controller.rb:14:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:21:26 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oMBNEUIeh4ZT9vetiFrnKYPYq6TCKNR3xk7Xn6jt4ToVOXfPUWQAGHZG1lT7RPjUg1bx72yJgOmrDyIB6NTQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"ad"}, "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/music
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 18:21:26 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 45ms (Views: 33.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:21:30 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:21:37 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7bEcBbrfB6XWcNYSqvLxsr2AWKr2eeRZlUwsX9Ay6kr+uX/Ml70Tnb+aic6OV5zJFyHd8Ww15BUM+pJdQ9aisg==", "music"=>{"title"=>"ad", "author"=>"s", "album"=>"da", "genre"=>"Rock", "year"=>"rrrrrr"}, "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/music
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 18:21:37 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:24:09 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:30
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:24:13 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZZhQY/o8cNvXId/oEYdkEtEiG4w7Z8x7Z8xc2/KNBwangKIoorl+wa22KOE43Dr4eUNNaqhn310KY9x/C585A==", "music"=>{"title"=>"qe", "author"=>"qe", "album"=>"qe", "genre"=>"Rock", "year"=>"qe"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `checkNum' for #<MusicController:0x00007f63299dda30>):
+  
+app/controllers/music_controller.rb:11:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:24:26 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZZhQY/o8cNvXId/oEYdkEtEiG4w7Z8x7Z8xc2/KNBwangKIoorl+wa22KOE43Dr4eUNNaqhn310KY9x/C585A==", "music"=>{"title"=>"qe", "author"=>"qe", "album"=>"qe", "genre"=>"Rock", "year"=>"qe"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `match' for nil:NilClass):
+  
+app/controllers/music_controller.rb:11:in `create'
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:26:22 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:26:30 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZZhQY/o8cNvXId/oEYdkEtEiG4w7Z8x7Z8xc2/KNBwangKIoorl+wa22KOE43Dr4eUNNaqhn310KY9x/C585A==", "music"=>{"title"=>"qe", "author"=>"qe", "album"=>"qe", "genre"=>"Rock", "year"=>"qe"}, "commit"=>"Save Changes"}
+No template found for MusicController#create, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:27:23 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:27:24 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:27:40 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:28:25 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 18:29:04 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 18:29:17 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f7sEsmo/uVta6FC3XuGwYnux9ATn9Jq25uNSZS/2SU9/YFshx96O8yMKC7VBdoGDhGH84UNOcKOvBYZ6dhJK3A==", "music"=>{"title"=>"awdadsadsa", "author"=>"autore", "album"=>"album incognito", "genre"=>"Rock", "year"=>"1002"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (1.1ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "awdadsadsa"], ["author", "autore"], ["album", "album incognito"], ["genre", "Rock"], ["year", "1002"], ["created_at", "2020-05-06 16:29:17.385052"], ["updated_at", "2020-05-06 16:29:17.385052"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/12
+Completed 302 Found in 35ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:29:17 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:36:02 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 1 tab used for indentation, but the rest of the document was indented using 4 spaces.):
+     9:         %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+    10: 
+    11: %div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center'}
+    12: 	%h2 Details about #{@music.title}
+    13: 	
+    14: 	%ul#details
+    15: 		%li
+  
+app/views/music/show.html.haml:12
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:37:12 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 1 tab used for indentation, but the rest of the document was indented using 4 spaces.):
+     9:         %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+    10: 
+    11: %div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center'}
+    12: 	%h2 Details about #{@music.title}
+    13: 	
+    14: 	%ul#details
+    15: 		%li
+  
+app/views/music/show.html.haml:12
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:37:27 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 1 tab used for indentation, but the rest of the document was indented using 4 spaces.):
+     9:         %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+    10: 
+    11: %div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center'}
+    12: 	%h2 Details about #{@music.title}
+    13: 
+    14: 	%table.table
+    15: 		%tr
+  
+app/views/music/show.html.haml:12
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:37:46 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 1 tab used for indentation, but the rest of the document was indented using 4 spaces.):
+    11: %div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center'}
+    12: %h2 Details about #{@music.title}
+    13: 
+    14: 	%table.table
+    15: 		%tr
+    16: 			%th Author
+    17: 			%td= @music.author
+  
+app/views/music/show.html.haml:14
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 18:38:06 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 49ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 18:38:28 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:39:38 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:40:02 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:40:18 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:40:31 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:41:08 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:42:19 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:44:16 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.5ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:47:53 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:48:09 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:48:17 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:48:52 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:49:02 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:49:22 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:49:24 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:49:53 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:50:24 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:04 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:05 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:14 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 86ms (Views: 77.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:48 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:58 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:52:59 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:53:44 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...\n</tr>\n<tr>\n<th style='white-space: nowrap; width: 1%'>Ye...
+...                          ^~~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:21: syntax error, unexpected ':', expecting ')'
+...\n<tr>\n<th style='white-space: nowrap; width: 1%'>Year</th>...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:21: syntax error, unexpected ':', expecting ')'
+...le='white-space: nowrap; width: 1%'>Year</th>\n<td>".freeze)...
+...                              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+...lpers.html_escape((link_to 'Add a review', new_music_review_...
+...                            ^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+...pers.html_escape((link_to 'Edit info', edit_music_path(@musi...
+...                           ^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+...rs.html_escape((link_to 'Delete', music_path(@music), :metho...
+...                         ^~~~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+...pers.html_escape((link_to 'Back to track list', music_index_...
+...                           ^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:28: unterminated string meets end of file
+          end
+              ^
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/views/music/show.html.haml:28: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/music/show.html.haml:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/music/show.html.haml:21: syntax error, unexpected ':', expecting ')'
+app/views/music/show.html.haml:21: syntax error, unexpected ':', expecting ')'
+app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/music/show.html.haml:24: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/music/show.html.haml:28: unterminated string meets end of file
+app/views/music/show.html.haml:28: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:53:54 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:54:16 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:55:31 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:55:43 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:57:41 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:58:19 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.4ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:58:31 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (1.6ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 48ms (Views: 40.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 18:59:17 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:01:19 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: "\t " used for indentation, but the rest of the document was indented using 1 tab.):
+    24: 
+    25: 	%div.container{:style=>'margin-top:20px;'}
+    26: 	%button.btn.btn-light #{link_to 'Add a review', new_music_review_path(@music)}
+    27: 	 - 
+    28: 	%button.btn.btn-light{:style=>'margin-left: 10px, margin-right: 10px'} #{link_to 'Edit info', edit_music_path(@music)}
+    29: 	 - 
+    30: 	%button.btn.btn-light{:style=>'margin-right:10px'} #{link_to 'Delete', music_path(@music), :method => :delete}
+  
+app/views/music/show.html.haml:27
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:01:31 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:02:14 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:02:28 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:02:57 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    24: 
+    25: 	%div.container{:style=>'margin-top:20px;'}
+    26: 	%button.btn.btn-light.border #{link_to 'Add a review', new_music_review_path(@music)} 
+    27: 	%button.btn.btn-light.border#{link_to 'Edit info', edit_music_path(@music)}
+    28: 	%button.btn.btn-light.border#{link_to 'Delete', music_path(@music), :method => :delete}
+    29: 	%button.btn.btn-light.border #{link_to 'Back to track list', music_index_path}
+  
+app/views/music/show.html.haml:27
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:03:03 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1/reviews/new" for 127.0.0.1 at 2020-05-06 19:03:12 +0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"music_id"=>"1"}
+  Rendering reviews/new.html.haml within layouts/application
+  Rendered reviews/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music/1/edit" for 127.0.0.1 at 2020-05-06 19:03:29 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:03:37 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/1/reviews/new" for 127.0.0.1 at 2020-05-06 19:03:39 +0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"music_id"=>"1"}
+  Rendering reviews/new.html.haml within layouts/application
+  Rendered reviews/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:04:15 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:04:19 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:04:33 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:04:36 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:04:53 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSfcTdS6/Wp0yC53wN3MoKm813ocCrI+jL0aTDr4S2s+L7+E+djpUh0icavkeKHbAx1SIYZGsnIVC6ROqRwDkw==", "music"=>{"title"=>"Titolo", "author"=>"Autore", "album"=>"Album", "genre"=>"Rock", "year"=>"321"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+  [1m[36mMusic Create (0.3ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Titolo"], ["author", "Autore"], ["album", "Album"], ["genre", "Rock"], ["year", "321"], ["created_at", "2020-05-06 17:04:53.628972"], ["updated_at", "2020-05-06 17:04:53.628972"]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music/13
+Completed 302 Found in 8ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/music/13" for 127.0.0.1 at 2020-05-06 19:04:53 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/music/13" for 127.0.0.1 at 2020-05-06 19:04:56 +0200
+Processing by MusicController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ek8WQDbLmhWIZMyrILqt8XjLReym7PG+8OqzqngYnq56lEnTmyqtvfGGl6k/LZwQhxtNCQJWG6u5DGe1IfydPQ==", "id"=>"13"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:31
+  [1m[36mMusic Destroy (0.2ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/music_controller.rb:31
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:31
+Redirected to http://localhost:3000/music
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:04:56 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:04:58 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:25
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-06 19:05:03 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-06 19:05:03 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:05:06 +0200
+Processing by MusicController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-06 19:05:06 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=admin&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-06 19:05:09 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "admin"], ["password", "admin"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:05:09 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 19:06:23 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 45ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:06:24 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.5ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:08:47 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 11 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    15:     %div.container{:style=>'background-color: lightgrey; border: solid 25px lightgrey; border-radius: 25px; box-shadow: 0 0 30px black; max-width: 600px '}
+    16:         = form_tag music_path(@music), :method => :put do
+    17: 
+    18:            %div.form-group
+    19:                 = label :music, :title, 'Title', style:"font-weight: bold"
+    20:                 = text_field :music, :title, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto; text-align: center', required:'true'
+    21: 
+  
+app/views/music/edit.html.haml:18
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:09:05 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:10:03 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:10:11 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:10:51 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:10:57 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/music/12" for 127.0.0.1 at 2020-05-06 19:11:15 +0200
+Processing by MusicController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QlyuhgLMIGkXfTPEK25VAGj9sy3vIyiIlyyN3EphVZRCh/EVry0XwW6faMY0+WThly27yEuZwp3eylnDE4VWBw==", "music"=>{"title"=>"awdadsadsa", "author"=>"autore", "album"=>"album incognito", "genre"=>"Rock", "year"=>"1002"}, "commit"=>"Save Changes", "id"=>"12"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+Redirected to http://localhost:3000/music/12
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 19:11:15 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:11:26 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.3ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/music/12" for 127.0.0.1 at 2020-05-06 19:11:30 +0200
+Processing by MusicController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n5cL5/sWJIOH0lmFaFfjAJtOcGgM8LOWRcTaj5MyY/xFSJQCZXbeUYMQZjaI8QKjOvxjatT50upfOmgNxUXPMA==", "music"=>{"title"=>"awdadsadsa", "author"=>"autore", "album"=>"album incognito", "genre"=>"Rock", "year"=>"1002"}, "commit"=>"Save Changes", "id"=>"12"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+Redirected to http://localhost:3000/music/12
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 19:11:30 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/12/edit" for 127.0.0.1 at 2020-05-06 19:11:33 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:43
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:45
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/music/12" for 127.0.0.1 at 2020-05-06 19:11:37 +0200
+Processing by MusicController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KrxhBJ/daNG5B1Htu/Rn4pBlqo7UgmAOg89whfvuDn/wY/7hAb2SA73Fbl5bUoZBMde5jAyLAXKZMcIHrZmisw==", "music"=>{"title"=>"awdadsadsa", "author"=>"autore", "album"=>"album incognito", "genre"=>"Rock", "year"=>"2001"}, "commit"=>"Save Changes", "id"=>"12"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+  [1m[36mMusic Update (0.2ms)[0m  [1m[33mUPDATE "musics" SET "year" = ?, "updated_at" = ? WHERE "musics"."id" = ?[0m  [["year", "2001"], ["updated_at", "2020-05-06 17:11:37.816641"], ["id", 12]]
+  ↳ app/controllers/music_controller.rb:38
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:38
+Redirected to http://localhost:3000/music/12
+Completed 302 Found in 7ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/music/12" for 127.0.0.1 at 2020-05-06 19:11:37 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:15
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:18
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:11:42 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:18:07 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+		if @exist
+		^~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:18:19 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+		if (@exist)
+		^~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:18:21 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+		if (@exist)
+		^~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/music_controller.rb:11: syntax error, unexpected if, expecting ')'
+app/controllers/music_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:18:41 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:50: syntax error, unexpected end, expecting ')'):
+  
+app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+app/controllers/music_controller.rb:50: syntax error, unexpected end, expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:18:53 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+		end
+		^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end, expecting ')'):
+  
+app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+app/controllers/music_controller.rb:51: syntax error, unexpected end, expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:19:05 +0200
+  
+SyntaxError (/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+		else
+		^~~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+		end
+		^~~
+/home/grandozen/Desktop/ASSIProject/ProgettoASSI/app/controllers/music_controller.rb:51: syntax error, unexpected end, expecting ')'):
+  
+app/controllers/music_controller.rb:13: syntax error, unexpected else, expecting ')'
+app/controllers/music_controller.rb:15: syntax error, unexpected end, expecting ')'
+app/controllers/music_controller.rb:51: syntax error, unexpected end, expecting ')'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:19:22 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 26.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:19:29 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PAF4xP20MNMUnI5tE7gnBYiGTLMuYUKMqg1c1gtUr8c82idXUFUHe21+1W8MLxbkd1ZEVorbqJnj64jJUrCsVA==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"12"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+  [1m[36mMusic Create (1.7ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["author", "ad"], ["album", "ad"], ["genre", "Rock"], ["year", "12"], ["created_at", "2020-05-06 17:19:29.343094"], ["updated_at", "2020-05-06 17:19:29.343094"]]
+  ↳ app/controllers/music_controller.rb:11
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+Redirected to http://localhost:3000/music/14
+Completed 302 Found in 17ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/music/14" for 127.0.0.1 at 2020-05-06 19:19:29 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/14" for 127.0.0.1 at 2020-05-06 19:19:31 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:19:35 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:19:37 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:19:44 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"43euinN5QAgqJnFHEySIK3ttXjFqv56/C9tfS4Ymd8zwf81DXhtUMEPMLps3geVQ0czbavDznvOSbeFJFcI/NA==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"12"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["author", "ad"], ["album", "ad"], ["genre", "Rock"], ["year", "12"], ["created_at", "2020-05-06 17:19:44.226737"], ["updated_at", "2020-05-06 17:19:44.226737"]]
+  ↳ app/controllers/music_controller.rb:11
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+Redirected to http://localhost:3000/music/15
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/music/15" for 127.0.0.1 at 2020-05-06 19:19:44 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:19:46 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:22:08 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 52ms (Views: 35.8ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:22:12 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v/5og9o1eAXySYeOSqz6mvqdnGn9Xskke5xZ1/uaP52s9gtK91dsPZuj2FJuCZfhUDwZMmcSyWjiKufVaH53ZQ==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"12"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" IS NULL AND "musics"."author" IS NULL AND "musics"."genre" IS NULL AND "musics"."year" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:22:12 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:22:19 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:22:23 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TbSCD2aP2f1RB6oCYEWuhUNcjhPUmXqEAzLqCvV0TS9evOHGS+3NxTjt9d5E4MP+6f0LSE7VesiahFQIZpAF1w==", "music"=>{"title"=>"ad", "author"=>"ad", "album"=>"ad", "genre"=>"Rock", "year"=>"12"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" IS NULL AND "musics"."author" IS NULL AND "musics"."genre" IS NULL AND "musics"."year" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:22:23 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.7ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusics (20200429133545)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "album" varchar, "genre" varchar, "year" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200429133545_create_musics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200429133545"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusicgoers (20200504102550)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "musicgoers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "provider" varchar, "string" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200504102550_create_musicgoers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200504102550"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateReview (20200506122845)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "musicman" integer, "comments" text, "musicgoer_id" integer, "music_id" integer)[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_musicgoer_id" ON "reviews" ("musicgoer_id")[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200506122845"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-06 17:25:14.336637"], ["updated_at", "2020-05-06 17:25:14.336637"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:27:38 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 307ms (Views: 292.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-06 19:27:41 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-06 19:27:41 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?utf8=%E2%9C%93&user%5Bname%5D=guest&user%5Bpassword%5D=[FILTERED]&commit=Login" for 127.0.0.1 at 2020-05-06 19:27:46 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"guest", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mMusicgoer Load (0.2ms)[0m  [1m[34mSELECT "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."name" = ? AND "musicgoers"."password" = ?[0m  [["name", "guest"], ["password", "guest"]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/music
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:27:46 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-06 19:27:50 +0200
+Processing by MusicController#new as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:29
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:29:28 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gj9DnPvjtpBhC0GyrLfzGPKo+X8yQtA3+U9Lo9M3QsMJNyBV1oGiqAjhHm6IEp5jWAl8JKgO0Htg+fWhQNMKOw==", "music"=>{"title"=>"Thunderstruck", "author"=>"AC/DC", "album"=>"Thunderstruck (singolo)", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" IS NULL AND "musics"."author" IS NULL AND "musics"."genre" IS NULL AND "musics"."year" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:29:28 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:30:06 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gj9DnPvjtpBhC0GyrLfzGPKo+X8yQtA3+U9Lo9M3QsMJNyBV1oGiqAjhHm6IEp5jWAl8JKgO0Htg+fWhQNMKOw==", "music"=>{"title"=>"Thunderstruck", "author"=>"AC/DC", "album"=>"Thunderstruck (singolo)", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" IS NULL AND "musics"."author" IS NULL AND "musics"."genre" IS NULL AND "musics"."year" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Thunderstruck"], ["author", "AC/DC"], ["album", "Thunderstruck (singolo)"], ["genre", "Rock"], ["year", "1990"], ["created_at", "2020-05-06 17:30:06.757042"], ["updated_at", "2020-05-06 17:30:06.757042"]]
+  ↳ app/controllers/music_controller.rb:11
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+Redirected to http://localhost:3000/music/1
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-05-06 19:30:06 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:30:10 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gj9DnPvjtpBhC0GyrLfzGPKo+X8yQtA3+U9Lo9M3QsMJNyBV1oGiqAjhHm6IEp5jWAl8JKgO0Htg+fWhQNMKOw==", "music"=>{"title"=>"Thunderstruck", "author"=>"AC/DC", "album"=>"Thunderstruck (singolo)", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" IS NULL AND "musics"."author" IS NULL AND "musics"."genre" IS NULL AND "musics"."year" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+  [1m[36mMusic Create (0.7ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Thunderstruck"], ["author", "AC/DC"], ["album", "Thunderstruck (singolo)"], ["genre", "Rock"], ["year", "1990"], ["created_at", "2020-05-06 17:30:10.910237"], ["updated_at", "2020-05-06 17:30:10.910237"]]
+  ↳ app/controllers/music_controller.rb:11
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:11
+Redirected to http://localhost:3000/music/2
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/music/2" for 127.0.0.1 at 2020-05-06 19:30:10 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:30:17 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-05-06 19:31:31 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gj9DnPvjtpBhC0GyrLfzGPKo+X8yQtA3+U9Lo9M3QsMJNyBV1oGiqAjhHm6IEp5jWAl8JKgO0Htg+fWhQNMKOw==", "music"=>{"title"=>"Thunderstruck", "author"=>"AC/DC", "album"=>"Thunderstruck (singolo)", "genre"=>"Rock", "year"=>"1990"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" = ? AND "musics"."author" = ? AND "musics"."genre" = ? AND "musics"."year" = ? LIMIT ?[0m  [["title", "Thunderstruck"], ["author", "AC/DC"], ["genre", "Rock"], ["year", "1990"], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:10
+Redirected to http://localhost:3000/music
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:31:31 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 48ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/music/2" for 127.0.0.1 at 2020-05-06 19:31:34 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:19
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:21
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:22
+  Rendering music/show.html.haml within layouts/application
+  Rendered music/show.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/music/2" for 127.0.0.1 at 2020-05-06 19:31:36 +0200
+Processing by MusicController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yU7AnRtP+yBJO79DdDaGnOtKVssMTJJ5ajJ7be1RHWXJlZ8Otq7MiDDZ5EFrobd9FJpeLqj2eGwj1K9ytLUe9g==", "id"=>"2"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:35
+  [1m[36mMusic Destroy (0.2ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/music_controller.rb:35
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:35
+Redirected to http://localhost:3000/music
+Completed 302 Found in 11ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-06 19:31:36 +0200
+Processing by MusicController#index as HTML
+  [1m[36mMusicgoer Load (0.1ms)[0m  [1m[34mSELECT  "musicgoers".* FROM "musicgoers" WHERE "musicgoers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:6
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:24
+  Rendered music/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-05-06 19:31:52 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-05-06 19:31:52 +0200
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.haml within layouts/application
+  Rendered sessions/login.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 89ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+

@@ -1,20 +1,39 @@
-%h2 Create a new music
+-#Navigation Bar
+%nav.navbar.navbar-dark.bg-dark
+    %a{:style=>'color: white', :href=>'#'} Logo
+    -#Elemento a destra
+    %div
+        -#Mostra il nome dell'utente
+        %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+        -#Mostra il bottone per il Logout
+        %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
 
-= form_tag music_path(@music), :method => :put do
+%div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center'}
 
-    = label :music, :title, 'Title'
-    = text_field :music, :title
+    %h2{:style=>'margin-bottom: 50px;'} Modify #{@music.title}
 
-    =label :music, :author, 'Author'
-    =text_field :music, :author
+    %div.container{:style=>'background-color: lightgrey; border: solid 25px lightgrey; border-radius: 25px; box-shadow: 0 0 30px black; max-width: 600px '}
+        = form_tag music_path(@music), :method => :put do
 
-    =label :music, :album, 'Album'
-    =text_field :music, :album
+            %div.form-group
+                = label :music, :title, 'Title', style:"font-weight: bold"
+                = text_field :music, :title, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto; text-align: center', required:'true'
 
-    =label :music, :genre, 'Genre'
-    =select :music, :genre, ['Rock', 'Jazz', 'Metal', 'Pop', 'Electronic','Rap']
 
-    =label :music, :Year, 'Year'
-    =text_field :music, :year
+            %div.form-group
+                =label :music, :author, 'Author', style:"font-weight: bold"
+                =text_field :music, :author, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto; text-align: center', required:'true'
 
-    =submit_tag 'Save Changes'
+            %div.form-group
+                =label :music, :album, 'Album', style:"font-weight: bold"
+                =text_field :music, :album, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto; text-align: center', required:'true'
+
+            %div.form-group
+                =label :music, :genre, 'Genre', style:"font-weight: bold"
+                =select :music, :genre, ['Rock', 'Jazz', 'Metal', 'Pop', 'Electronic','Rap'], class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto'
+
+            %div.form-group
+                =label :music, :year, 'Year', style:"font-weight: bold"
+                =number_field :music, :year, class:'form-control', style:'max-width: 500px; margin-left:auto; margin-right:auto; text-align: center', required:'true'
+
+            =submit_tag 'Save Changes'
