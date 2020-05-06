@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 	get '/callback' => "sessions#create"
 	get '/login' => "sessions#login"
 	get '/logout' => "sessions#destroy"
-	resources :music
+	resources :music do
+		resources :reviews
+	end
 end

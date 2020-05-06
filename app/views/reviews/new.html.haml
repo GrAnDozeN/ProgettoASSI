@@ -2,12 +2,12 @@
 
 = form_tag music_reviews_path, :method => :post do
 
-    = label :review, :pitchfork, 'Vote'
-    = select :review, :pitchfork, [1,2,3,4,5]
- 
+    = label :review, :musicman, 'Vote'
+    = select :review, :musicman, [1,2,3,4,5]
+    
     = label :review, :comments, 'Comment'
     = text_field :review, :comments
+    
+    
 
-    = submit_tag 'Add Review' 
-  
-  
+    =submit_tag 'Add a review'
