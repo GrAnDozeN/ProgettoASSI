@@ -6,7 +6,7 @@
     -#Mostra il nome dell'utente
     %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
     -#Mostra il bottone per il Logout
-    %button.btn{:style=>'background-color: white; margin-left: 10px'} #{link_to 'Logout', logout_path}
+    %button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
 -#Body
 %div.container{:style=>'margin:0; margin-top: 10px'}
   %h1 All Musics
@@ -29,6 +29,6 @@
           %td= music.year 
           %td= link_to "Details", music_path(music)
   -#Bottoni per riindirizzamenti
-  %button.btn{:style=>'background-color: grey'} #{link_to 'Add new track', new_music_path, {:style=>'color: white'}}
+  %button.btn.btn-secondary #{link_to 'Add new track', new_music_path, {:style=>'color: white; text-decoration: none; font-weight: bold'}}
   -
-  %button.btn{:style=>'background-color: grey'} #{link_to 'Login', login_path, {:style=>'color: white'}}
+  %button.btn.btn-secondary #{link_to 'Login', login_path, {:style=>'color: white; text-decoration: none; font-weight: bold'}}
