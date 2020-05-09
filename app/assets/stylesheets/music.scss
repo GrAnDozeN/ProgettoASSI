@@ -2,5 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'bootstrap';
-@import 'font-awesome';
+@import 'bootstrap'; //Importo Bootstrap
+@import 'font-awesome'; //Import FontAwesome, per uso di icone
+
+.navRight {
+    margin-left: 10px;
+}
+
+.contForm{
+    background-color: lightgrey;
+    border: solid 25px lightgrey;
+    border-radius: 25px;
+    box-shadow: 0 0 30px black;
+}
+
+.insertText{
+    max-width: 500px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    text-align: center;
+    background-color:red;
+}
