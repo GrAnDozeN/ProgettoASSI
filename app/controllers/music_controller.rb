@@ -19,7 +19,8 @@ skip_before_action :verify_authenticity_token
 		@currentUser = Musicgoer.find(session[:user_id])
         id = params[:id]
         if Music.exists?(id)
-        		@music = Music.find(id)
+				@music = Music.find(id)
+				@reviews = Review.where(:music_id=>id)
         else
         render html: 'Track does not exit'
         end

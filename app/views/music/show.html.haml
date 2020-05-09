@@ -6,11 +6,14 @@
 		-#Mostra il nome dell'utente
 		%span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
 		-#Mostra il bottone per il Logout
-		%button.btn.btn-light{:style=>'margin-left: 10px'} #{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}}
+		%button.btn.btn-light{:style=>'margin-left: 10px'}
+			#{link_to 'Logout', logout_path, {:style=>'color: #007bff; text-decoration: none; font-weight: bold'}} 
+			%span.fa.fa-sign-out
 
 %div.container-fluid{:style=>'margin:0; margin-top: 10px; text-align:center; margin: auto'}
 	%h2{:style=>'margin-bottom: 50px;'} Details about #{@music.title}
 
+	-#Table informazioni brano
 	%table.table.table-hover.border.rounded{:style=>'margin:auto; max-width: 500px'}
 		%tr
 			%th{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Author
@@ -20,10 +23,36 @@
 			%td= @music.album
 		%tr
 			%th{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Year
-			%td= @music.year
+			%td= @music.year 
+
+	-#Bottoni
+	%div.container{:style=>'margin-top:20px;'}
+	%button.btn.btn-light.border 
+		%span.fa.fa-comment
+		#{link_to 'Add a review', new_music_review_path(@music), :style=>'text-decoration: none;'} 
+	%button.btn.btn-light.border 
+		%span.fa.fa-pencil-square-o
+		#{link_to 'Edit info', edit_music_path(@music), :style=>'text-decoration: none;'}
+	%button.btn.btn-light.border 
+		%span.fa.fa-trash-o
+		#{link_to 'Delete', music_path(@music), :method => :delete, :style=>'text-decoration: none;'}
+	%button.btn.btn-light.border 
+		%span.fa.fa-list-ul
+		#{link_to 'Back to track list', music_index_path, :style=>'text-decoration: none;'}
 
 	%div.container{:style=>'margin-top:20px;'}
-	%button.btn.btn-light.border #{link_to 'Add a review', new_music_review_path(@music), :style=>'text-decoration: none;'} 
-	%button.btn.btn-light.border #{link_to 'Edit info', edit_music_path(@music), :style=>'text-decoration: none;'}
-	%button.btn.btn-light.border #{link_to 'Delete', music_path(@music), :method => :delete, :style=>'text-decoration: none;'}
-	%button.btn.btn-light.border #{link_to 'Back to track list', music_index_path, :style=>'text-decoration: none;'}
+	%span{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Reviews
+	%table.table.table-sm.table{:style=>'margin:auto; max-width: 500px'}
+		%tbody
+			- @reviews.each do |review|
+				%tr
+					%td= review.musicman
+					%td= review.comments
+					%td{:style=>'white-space: nowrap; width: 1%'}
+						#{link_to 'Edit', edit_music_review_path(review), :style=> ((@currentUser.id == review.musicgoer_id) || (@currentUser.id == 1) ? "visibility: visible" : "visibility:hidden")}
+						-#In style, controllo se User attuale == User della review, oppure se è admin (id=1)
+						%span.fa.fa-pencil-square-o{:style=> ((@currentUser.id == review.musicgoer_id) || (@currentUser.id == 1) ? "visibility: visible" : "visibility:hidden")}
+						-#stessa cosa vale qua
+			
+
+	
