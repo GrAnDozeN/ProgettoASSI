@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
 	def new
-		
+		@currentUser = Musicgoer.find(session[:user_id])
 	end
 
 	def show
