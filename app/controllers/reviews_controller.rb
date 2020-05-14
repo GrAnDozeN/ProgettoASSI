@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
 
 	def new
-		@currentUser = Musicgoer.find(session[:user_id])
 	end
 
 	def show
@@ -34,7 +33,6 @@ class ReviewsController < ApplicationController
     end
 
 	def edit
-		@currentUser = Musicgoer.find(session[:user_id])
 		id = params[:music_id]
 		@review = Review.find(id)
 	end

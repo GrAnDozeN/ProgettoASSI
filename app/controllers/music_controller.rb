@@ -3,7 +3,6 @@ skip_before_action :verify_authenticity_token
 
 	def index
 		@musics = Music.all
-		@currentUser = Musicgoer.find(session[:user_id])
 	end
 
 	def create
@@ -16,7 +15,6 @@ skip_before_action :verify_authenticity_token
 	end
 
 	def show
-		@currentUser = Musicgoer.find(session[:user_id])
         id = params[:id]
         if Music.exists?(id)
 				@music = Music.find(id)
@@ -27,7 +25,6 @@ skip_before_action :verify_authenticity_token
 	end
 
 	def new
-		@currentUser = Musicgoer.find(session[:user_id])
 	end
 
 	def destroy
@@ -45,7 +42,6 @@ skip_before_action :verify_authenticity_token
     end
 
 	def edit
-		@currentUser = Musicgoer.find(session[:user_id])
 		id = params[:id]
 		@music = Music.find(id)
 	end

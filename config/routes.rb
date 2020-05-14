@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  	devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	#get ('music') => redirect('/')
 	#post ('/music/:id') => "music#update"
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
 	resources :music do
 		resources :reviews
 	end
+	get '' => redirect("/music")
 end
