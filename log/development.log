@@ -23753,3 +23753,235 @@ Processing by MusicController#index as HTML
 Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-21 15:24:44 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:24:44 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (46.5ms)
+Completed 200 OK in 16635ms (Views: 16591.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:25:11 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 196ms (Views: 175.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:25:22 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6GBSTDSLReTqt/ZmkhOHXICOP/Ygnx+iupWPw9VseMAhFCZ8osWSgD1tsleLx0+Pxc4pnDN7Clr2vUoq+qWqbw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6GBSTDSLReTqt/ZmkhOHXICOP/Ygnx+iupWPw9VseMAhFCZ8osWSgD1tsleLx0+Pxc4pnDN7Clr2vUoq+qWqbw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (4.9ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 253ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-05-21 15:25:33 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.6ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-21 15:25:53 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hN99uoVQyXHEcvhgBdbcZikanYdUXOB7gfoEa1vwei5UfyhHvre9Yw8Lhm0J5ao4ivK9ZEXk7RKeiafqarauTg==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "guest@gmail.com"], ["encrypted_password", "$2a$11$4xQUhie8QNx04jm2CNzNQuwgF/y79QL0FlC8JzXVjWOoj29QHhYRa"], ["created_at", "2020-05-21 13:25:53.930216"], ["updated_at", "2020-05-21 13:25:53.930216"]]
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-21 15:25:53 +0200
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:25:53 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (10.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:26:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (10.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:26:11 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     -#Elemento a destra
+     6:     %div
+     7:         -#Mostra il nome dell'utente
+     8:         %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+     9:         -#Mostra il bottone per il Logout || class(navRight) in music.scss
+    10:         %button.btn.btn-light.navRight
+    11:             #{link_to 'Logout', logout_path, class: "logoutBtn", data: {confirm: 'Are you sure to leave?'}}
+  
+app/views/music/new.html.haml:8:in `_app_views_music_new_html_haml__3037692722483533840_70184993917700'
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:30:33 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (60.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-21 15:31:37 +0200
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:31:37 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (4.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 90ms (Views: 83.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:31:44 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (20.5ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:32:15 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     -#Elemento a destra
+     6:     %div
+     7:         -#Mostra il nome dell'utente
+     8:         %span{:style=>'color: white', :href=>'#'}Salve #{@currentUser.name}
+     9:         -#Mostra il bottone per il Logout || class(navRight) in music.scss
+    10:         %button.btn.btn-light.navRight
+    11:             #{link_to 'Logout', logout_path, class: "logoutBtn", data: {confirm: 'Are you sure to leave?'}}
+  
+app/views/music/new.html.haml:8:in `_app_views_music_new_html_haml__3037692722483533840_70184987597380'
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:32:21 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:32:30 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:33:31 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:33:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:34:01 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CFwURJPb3jOyNT/005Tu5ai6I9KZcMcfEasjhQ0dgfYBiEsimPGWIBx3uLxlv8QAR7ts6LCI4BiuXr4LlnKlNw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 174ms (ActiveRecord: 10.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CFwURJPb3jOyNT/005Tu5ai6I9KZcMcfEasjhQ0dgfYBiEsimPGWIBx3uLxlv8QAR7ts6LCI4BiuXr4LlnKlNw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 254ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-21 15:34:08 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FLqhLB6N31GvA4RLWYOSxLoEt/OmejykbxetQFnaUF7ToMYYeRmltopu/XE2EqjZaQA3mPXdxH4SQhbhMDW8cQ==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/giovanni/.rvm/gems/ruby-2.6.5@rubyset_2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-21 15:34:08 +0200
+Started GET "/music" for 127.0.0.1 at 2020-05-21 15:34:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:28
+  Rendered music/index.html.haml within layouts/application (11.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:34:14 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-05-21 15:34:42 +0200
+Processing by MusicController#new as HTML
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (9.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.1ms)
+
+
