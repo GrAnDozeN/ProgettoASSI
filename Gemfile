@@ -70,6 +70,7 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 #Add FontAwesome
 gem 'font-awesome-rails'
+gem 'canard', '~> 0.5.0.pre'
 
 #Add device, for user implementation
 gem 'devise'

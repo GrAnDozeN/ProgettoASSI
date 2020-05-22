@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
 		user_id = session[:user_id]
 		@music = Music.find(music_id)
 		@review = Review.new(params[:review].permit(:musicman, :comments))
+		authorize! :create, @review, :message => "Attenzione: Non sei autorizzato a creare una recensione"
 		@review.musicgoer_id = user_id
 		@review.music_id = music_id
 		@review.save!
@@ -21,6 +22,7 @@ class ReviewsController < ApplicationController
 	def destroy
 		id = params[:id]
 		@review = @Review.find(id)
+		authorize! :destroy, @review, :message => "Attenzione: Non sei autorizzato ad eliminare una recensione"
 		@review.destroy
 		redirect_to music_show_path
 	end
