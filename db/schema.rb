@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2020_05_22_132620) do
   create_table "reviews", force: :cascade do |t|
     t.integer "musicman"
     t.text "comments"
-    t.integer "musicgoer_id"
+    t.integer "user_id"
     t.integer "music_id"
     t.index ["music_id"], name: "index_reviews_on_music_id"
-    t.index ["musicgoer_id"], name: "index_reviews_on_musicgoer_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

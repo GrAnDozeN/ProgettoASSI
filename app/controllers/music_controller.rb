@@ -1,5 +1,5 @@
 class MusicController < ApplicationController
-skip_before_action :verify_authenticity_token
+	skip_before_action :verify_authenticity_token
 	before_action :authenticate_user!
 
 	def index
@@ -39,9 +39,9 @@ skip_before_action :verify_authenticity_token
 
 	def update
         id = params[:id]
-	@music = Music.find(id)
-	authorize! :update, @music, :message => "Attenzione: Non sei autorizzato ad aggiornare brani"
-	@music.update_attributes!(params[:music].permit(:title, :author, :album, :genre, :year))
+		@music = Music.find(id)
+		authorize! :update, @music, :message => "Attenzione: Non sei autorizzato ad aggiornare brani"
+		@music.update_attributes!(params[:music].permit(:title, :author, :album, :genre, :year))
         redirect_to music_path(@music)
     end
 
