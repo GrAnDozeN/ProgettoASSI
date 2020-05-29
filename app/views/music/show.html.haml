@@ -21,11 +21,12 @@
 	-#Bottoni || class(fa) fanno parte di AwesomeFont, sono icone
 	%button.btn.btn-light.border 
 		%span.fa.fa-comment
-		#{link_to 'Add a review', new_music_review_path(@music), :style=>'text-decoration: none;'} 
-	%button.btn.btn-light.border 
+		#{link_to 'Add a review', new_music_review_path(@music), :style=>'text-decoration: none;'} 	
+	- if can? :destroy, Music
+		%button.btn.btn-light.border 
 		%span.fa.fa-pencil-square-o
 		#{link_to 'Edit info', edit_music_path(@music), :style=>'text-decoration: none;'}
-	%button.btn.btn-light.border 
+		%button.btn.btn-light.border 
 		%span.fa.fa-trash-o
 		#{link_to 'Delete', music_path(@music), :method => :delete, :style=>'text-decoration: none;'}
 	%button.btn.btn-light.border 
