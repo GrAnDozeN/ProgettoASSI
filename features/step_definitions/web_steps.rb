@@ -45,6 +45,14 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given "I am logged" do
+  visit path_to("the Register Page")
+  fill_in("user_email", :with=>"guest@gmail.com")
+  fill_in("user_password", :with=>"password")
+  fill_in("user_password_confirmation", :with=>"password")
+  click_button("Sign up")
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end

@@ -21,6 +21,21 @@ module NavigationHelpers
     when /^the Create New Track page/
       '/music/new'
 
+    when /^the Login Page/
+      '/users/sign_in'
+
+    when /^the Register Page/
+      '/users/sign_up'
+      
+    when /^Add Music/
+      '/music/new'
+
+    when /^show a track/
+      '/music/1'
+
+    when /^the edit a track page/
+      '/music/1/edit'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
