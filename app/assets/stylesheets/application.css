@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap'; 
+@import 'font-awesome';
+
+
+.mainContainer{
+    margin-top: 10px;
+    max-width: 1024px;
+}
+
+.displayContainer{
+    text-align:center;
+}

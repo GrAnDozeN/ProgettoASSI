@@ -36,6 +36,14 @@ module NavigationHelpers
     when /^the edit a track page/
       '/music/1/edit'
 
+    when /^the create a review page/
+      '/music/1/reviews/new'
+
+    when /^the edit a review page/
+      '/music/1/reviews/1/edit'
+
+    when /^the forgot your password page/
+      '/users/password/new'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

@@ -4,11 +4,12 @@ Rails.application.routes.draw do
 	#get ('music') => redirect('/')
 	#post ('/music/:id') => "music#update"
 	#post ('/music/new') => "music#create"
-	get '/callback' => "sessions#create"
-	get '/login' => "sessions#login"
-	get '/logout' => "sessions#destroy"
+	#get '/callback' => "sessions#create"
+	#get '/login' => "sessions#login"
+	#get '/logout' => "sessions#destroy"
 	resources :music do
 		resources :reviews
 	end
 	get '' => redirect("/music")
+	resources :user
 end

@@ -74,3 +74,5 @@ gem 'canard', '~> 0.5.0.pre'
 
 #Add device, for user implementation
 gem 'devise'
+gem "selenium-webdriver"
+gem "rspec-rails"

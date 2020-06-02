@@ -5,6 +5,7 @@
   %table.table#music  
     %thead
       %tr
+        %th
         %th Track
         %th Author
         %th Album
@@ -13,6 +14,7 @@
     %tbody
       - @musics.each do |music|
         %tr
+          %td= image_tag @albums[music.title], :style => "max-height: 100px"
           %td= music.title
           %td= music.author 
           %td= music.album 

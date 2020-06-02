@@ -14,6 +14,10 @@
 		%tr
 			%th{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Year
 			%td= @music.year 
+		%tr
+			-if (@id_music.present? && (current_user.admin? || current_user.premium?)) 
+				%iframe{:allow => "encrypted-media", :allowtransparency => "true", :frameborder => "1", :height => "80", :src => "https://open.spotify.com/embed/track/" + @id_music, :width => "500", :id=>"preview"}
+
 
 	-#Divisore
 	%div.container{:style=>'margin-top:20px;'}
@@ -24,11 +28,11 @@
 		#{link_to 'Add a review', new_music_review_path(@music), :style=>'text-decoration: none;'} 	
 	- if can? :destroy, Music
 		%button.btn.btn-light.border 
-		%span.fa.fa-pencil-square-o
-		#{link_to 'Edit info', edit_music_path(@music), :style=>'text-decoration: none;'}
+			%span.fa.fa-pencil-square-o
+			#{link_to 'Edit info', edit_music_path(@music), :style=>'text-decoration: none;'}
 		%button.btn.btn-light.border 
-		%span.fa.fa-trash-o
-		#{link_to 'Delete', music_path(@music), :method => :delete, :style=>'text-decoration: none;'}
+			%span.fa.fa-trash-o
+			#{link_to 'Delete', music_path(@music), :method => :delete, :style=>'text-decoration: none;'}
 	%button.btn.btn-light.border 
 		%span.fa.fa-list-ul
 		#{link_to 'Back to track list', music_index_path, :style=>'text-decoration: none;'}
@@ -46,16 +50,16 @@
 								-#Unless inserisce "color: orange" se !(i>review.musicman)
 								%span.fa.fa-star{:style=>("color: orange" unless (i>review.musicman))}
 						%td= review.comments
-						%td{:style=>'white-space: nowrap; width: 1%'}
-							#{link_to 'Edit', edit_music_review_path(review), :style=>("visibility:hidden" unless ((current_user.id == review.user_id) || (current_user.id == 1)))}
-							-#In style, controllo se User attuale == User della review, oppure se è admin (id=1)
-							%span.fa.fa-pencil-square-o{:style=>("visibility:hidden" unless ((current_user.id == review.user_id) || (current_user.id == 1)))}
-							-#stessa cosa vale qua
-						%td{:style=>'white-space: nowrap; width: 1%'}
-							#{link_to 'Remove', edit_music_review_path(review), :style=>("visibility:hidden" unless ((current_user.id == review.user_id) || (current_user.id == 1)))}
-							-#In style, controllo se User attuale == User della review, oppure se è admin (id=1)
-							%span.fa.fa-trash-o{:style=>("visibility:hidden" unless ((current_user.id == review.user_id) || (current_user.id == 1)))}
-							-#stessa cosa vale qua
-			
-
+						
+						- if can? :destroy, Review
+							%td{:style=>'white-space: nowrap; width: 1%'}
+								#{link_to 'Edit', edit_music_review_path(review)}
+								-#In style, controllo se User attuale == User della review, oppure se è admin (id=1)
+								%span.fa.fa-pencil-square-o
+								-#stessa cosa vale qua
+							%td{:style=>'white-space: nowrap; width: 1%'}
+								#{link_to 'Remove', music_review_path(review), :method => :delete}
+								-#In style, controllo se User attuale == User della review, oppure se è admin (id=1)
+								%span.fa.fa-trash-o
+								-#stessa cosa vale qua
 	

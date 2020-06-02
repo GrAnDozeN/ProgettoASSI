@@ -53,12 +53,34 @@ Given "I am logged" do
   click_button("Sign up")
 end
 
+Given "I am logged as admin" do
+  visit path_to("the Register Page")
+  fill_in("user_email", :with=>"admin@gmail.com")
+  fill_in("user_password", :with=>"password")
+  fill_in("user_password_confirmation", :with=>"password")
+  click_button("Sign up")
+  user = User.find(1)
+  user.roles_mask = 2
+  user.save
+end
+
+Then /^I should (not )?see the preview$/ do |negate|
+  expectation = negate ? :should_not : :should
+  page.send(expectation, have_css("#preview"))
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
+end
+
+When "I accept the alert" do
+  page.accept_confirm do
+    click_button('OK')
+  end
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
@@ -260,3 +282,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+

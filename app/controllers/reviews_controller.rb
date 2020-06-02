@@ -20,11 +20,11 @@ class ReviewsController < ApplicationController
 	end
 
 	def destroy
-		id = params[:id]
-		@review = @Review.find(id)
+		id = params[:music_id]
+		@review = Review.find(id)
 		authorize! :destroy, @review, :message => "Attenzione: Non sei autorizzato ad eliminare una recensione"
 		@review.destroy
-		redirect_to music_show_path
+		redirect_to music_path(@review.music_id)
 	end
 
 	def update
