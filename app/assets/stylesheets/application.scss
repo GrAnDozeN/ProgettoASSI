@@ -15,6 +15,7 @@
  */
 @import 'bootstrap'; 
 @import 'font-awesome';
+@import 'social-share-button';
 
 
 .mainContainer{
@@ -24,4 +25,13 @@
 
 .displayContainer{
     text-align:center;
+}
+
+.social-share-button{
+    .ssb-icon {
+        background-size: 35px 35px;
+        height: 35px;
+        width: 35px;
+        margin-left: 20px
+    }
 }
