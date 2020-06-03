@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  	devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	#get ('music') => redirect('/')
 	#post ('/music/:id') => "music#update"
@@ -7,9 +6,11 @@ Rails.application.routes.draw do
 	#get '/callback' => "sessions#create"
 	#get '/login' => "sessions#login"
 	#get '/logout' => "sessions#destroy"
+	#map.connect '/auth/:provider', :controller => :authentications, :action => :blank
 	resources :music do
 		resources :reviews
 	end
+    devise_for :user, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
 	get '' => redirect("/music")
-	resources :user
 end

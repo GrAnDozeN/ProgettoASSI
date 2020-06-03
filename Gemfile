@@ -76,3 +76,6 @@ gem 'canard', '~> 0.5.0.pre'
 gem 'devise'
 gem "selenium-webdriver"
 gem "rspec-rails"
+gem "omniauth-facebook"
+
+gem 'social-share-button'

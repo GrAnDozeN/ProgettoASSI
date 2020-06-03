@@ -23,6 +23,8 @@
       <%= f.submit "Log in" %>
     </div>
   <% end %>
-
+  <div>
+    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path(:facebook) %>
+  </div>
   <%= render "users/shared/links" %>
 </div>

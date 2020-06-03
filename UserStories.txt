@@ -1,0 +1,166 @@
+    //  Account 
+
+1. REGISTRAZIONE
+Come visitatore 
+In modo che il sistema possa ricordarsi di me 
+Voglio creare un nuovo account 
+
+****    CONFERMA REGISTRAZIONE
+Come visitatore
+In modo da ricevere un email di conferma registrazione
+Voglio ricevere un email per confermare la registrazione
+  
+2. LOGIN 
+Come utente registrato 
+In modo che possa interagire con il sistema 
+Voglio effettuare l'accesso 
+  
+3. OAUTH FACEBOOK
+Come visitatore 
+In modo da usare un account di piattaforme esterne per effettuare il Login 
+Voglio effettuare il Login  con un occount esterno 
+  
+4. LOGOUT 
+Come utente registrato 
+In modo che altre persone non interagiscano con il sistema tramite il mio account sul computer in cui ho effettuato l'accesso 
+Voglio effettuare il Logout 
+  
+5. MODIFICA ACCOUNT
+Come utente registrato 
+In modo da modificare le mie informazioni personali 
+Voglio modificare il mio account 
+  
+6. CANCELLAZIONE ACCOUNT 
+Come utente registrato 
+In modo che io non possa più interagire con il sistema 
+Voglio eliminare il mio account 
+  
+****7. RECUPERO PASSWORD 
+Come utente registrato 
+In modo da poter effettuare il login in caso mi sia dimenticato la password 
+Voglio richiedere il recupero della password 
+
+****    LISTA UTENTI
+Come utente registrato
+in modo da poter visualizzare gli utenti registrati sul sistema
+Voglio visualizzare la lista degli utenti
+
+****    INFORMAZIONE UTENTE
+Come utente registrato
+In modo da poter visionare le informazioni pubbliche condivise da un altro utente, dei commenti inseriti e dei brani inseriti
+Voglio visualizzare le informazioni di un altro utente
+  
+//  Brani 
+  
+8. LISTA DEI BRANI 
+Come utente registrato/visitatore 
+In modo da poter vedere i brani presenti 
+Voglio vedere i brani aggiunti dagli utenti 
+
+    RICERCA DI UN BRANO
+Come utente registrao/visitore/admin
+in modo da poter trovare un brano desiderato
+voglio ricercare un brano
+
+****    ORDINARE I BRANI
+Come utente registrato/visitatore
+In modo da poter avere una lista più organizzata dei brani
+Voglio ordinare i brani a seconda del campo
+
+
+
+9. AGGIUNTA DI UN BRANO
+Come admin/utente registrato 
+In modo da inserire un brano nel sistema 
+Voglio inserire un brano 
+  
+****10. MODIFICA DI UN BRANO
+Come admin/utente registrato 
+In modo da poter modificare le informazioni di un brano aggiunto dall'utente stesso 
+Voglio modificare un brano aggiunto da me stesso 
+  
+****11. MODIFICA DI UN BRANO (ADMIN) 
+Come admin 
+In modo da poter modificare le informazioni di un brano aggiunto da un utente 
+Voglio modificare un brano 
+  
+12. ELIMINARE UN BRANO 
+Come admin/utente registrato 
+In modo da poter eliminare un brano aggiunto dall'utente stesso 
+Voglio eliminare i brani aggiunti da me stesso 
+  
+13. ELIMINARE UN BRANO (ADMIN) 
+Come admin 
+In modo da poter eliminare un brano 
+Voglio eliminare i brani aggiunti dagli utenti 
+
+    INFORMAZIONE DI UN BRANO
+Come utente registrato/visitatore
+In modo da poter visionare le informazioni di un brano
+Voglio vedere le informazioni di un brano
+
+    PREVIEW DI UN BRANO
+Come utente registrato
+In moda da poter ascolare un pezzo di un brano
+Voglio sentire la preview di un brano
+
+****    LINK DI ACQUISTO AMAZON
+Come utente registrato/visitatore
+in modo da poter acquistare un brano su Amazon
+Voglio viualizzare il link per Amazon di un brano
+
+****    CONDIVISIONE SUI SOCIAL
+Come utente registrato
+in modo da poter condividere un brano sulle varie piattaforme
+Voglio visualizzare i link per la condivisione nelle varie piattaforme di un brano
+
+
+
+
+****    AGGIUNTA A LISTA FAVORITI
+Come utente registrato
+In modo da poter aggiungere un brano alla lista favoriti
+Voglio aggiungere i brani ai favoriti
+
+****    RIMUOVERE A LISTA FAVORITI
+Come utente registrato
+In modo da poter rimuovore un brano dalla lista favoriti
+Voglio rimuovere i brani ai favoriti
+
+  
+//  Reviews 
+  
+14. AGGIUNTA DI UNA REVIEW 
+Come admin/utente registrato 
+In modo da poter mostrare a tutti la mia opinione sul brano 
+Voglio aggiungere una review per un brano aggiunto da un utente/admin 
+  
+15. MODIFICA DI UNA REVIEW 
+Come admin/utente registrato 
+In modo da poter cambiare la mia opinione su brano a cui ho già aggiunto una review 
+Voglio cambiare la review da me inserita 
+  
+16. ELIMINAZIONE DI UNA REVIEW 
+Come admin/utente registrato 
+In modo da poter eliminare una mia opinione su un brano in cui ho aggiunto la Review 
+Voglio eliminare la review da me inserita 
+  
+17. ELIMINAZIONE DI UNA REVIEW (ADMIN)
+Come admin 
+In modo da poter eliminare un opinione con un commento inappropiato 
+Voglio eliminare la review inserita dagli utenti registrati 
+
+
+//  ADMIN
+
+****    CONTATTA GLI SVILUPPATORI
+Come utente registrato
+In modo da poter segnalare Review/brani inappropiato, consigliare gli sviluppatori
+Voglio inviare un email agli sviluppatori
+
+****    INFO SVILUPPATORI
+Come utente registrato/visitatore
+In modo da poter visionare le informazioni degli sviluppatori
+Voglio visualizzare le informazioni degli sviluppatori
+
+****    ELIMINAZIONI
