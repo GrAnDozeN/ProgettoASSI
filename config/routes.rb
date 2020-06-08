@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     devise_for :user, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
 	get '' => redirect("/music")
+	resources :user, only:  [:index, :show, :destroy, :update]
 end

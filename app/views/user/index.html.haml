@@ -1,0 +1,9 @@
+%h1 User in MusicMan
+
+%table.table.container-fluid#users{style:"text-align:center"}
+    %tbody
+        - @users.each do |user|
+            %tr
+                //%td= user.email
+                %td
+                    #{link_to user.email.slice(0..(user.email.index("@")-1)), user_path(user), :style=>'text-decoration: none;'}

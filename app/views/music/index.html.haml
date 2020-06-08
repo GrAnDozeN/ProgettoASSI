@@ -6,11 +6,11 @@
     %thead
       %tr
         %th
-        %th Track
-        %th Author
-        %th Album
-        %th Genre
-        %th Year
+        %th= link_to "Track", :sort => "Title"
+        %th= link_to "Author", :sort => "author"
+        %th= link_to  "Album", :sort => "album"
+        %th= link_to "Genre", :sort => "genre"
+        %th= link_to "Year", :sort => "year"
     %tbody
       - @musics.each do |music|
         %tr

@@ -9,10 +9,22 @@ class MusicController < ApplicationController
 	def index
 		#@musics = Music.all
 		if (params[:search] && params[:search]!= "")
-			@musics = Music.where(title: params[:search])
+
+			if (params[:type] == "Title")
+				@musics = Music.where(title: params[:search])
+			elsif (params[:type] == "Artist")
+				@musics = Music.where(author: params[:search])
+			elsif (params[:type] == "Album")
+				@musics = Music.where(album: params[:search])
+			elsif (params[:type] == "Year")
+				@musics = Music.where(Year: params[:search])
+			end
+
 		else
 			@musics = Music.all
 		end
+
+		@musics = Music.order(params[:sort])
 		#	Token
 		#	Cerca l'album del brano
 		uri = URI ('https://api.spotify.com/v1/search')

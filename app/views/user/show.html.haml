@@ -1,0 +1,27 @@
+%h1 #{@user.email.slice(0..(@user.email.index("@")-1))}
+//- if can? :destroy, User
+%table
+    %tr
+        -if (!@user.premium? && !@user.admin?)
+            %td{:style=>'white-space: nowrap; width: 1%'}
+                #{link_to 'Promote to Premium', user_path(@user, :roles_mask => 1), :method => :put}
+                %span.fa.fa-pencil-square-o
+        -elsif (@user.premium?)
+            %td{:style=>'white-space: nowrap; width: 1%'}
+                #{link_to 'Demote to User', user_path(@user, :roles_mask => 0), :method => :put}
+                %span.fa.fa-pencil-square-o
+            
+          
+        -if (!@user.admin?)
+            %td{:style=>'white-space: nowrap; width: 1%'}
+                #{link_to 'Promote to Admin', user_path(@user, :roles_mask => 2), :method => :put}
+                %span.fa.fa-pencil-square-o
+        -elsif (@user.admin?)
+            %td{:style=>'white-space: nowrap; width: 1%'}
+                #{link_to 'Demote to Premium', user_path(@user, :roles_mask => 1), :method => :put}
+                %span.fa.fa-pencil-square-o
+
+        
+        %td{:style=>'white-space: nowrap; width: 1%'}
+            #{link_to 'Remove', user_path(@user), :method => :delete}
+            %span.fa.fa-trash-o

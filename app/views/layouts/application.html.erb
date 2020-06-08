@@ -11,22 +11,32 @@
 
   <body>
     <nav class='navbar navbar-dark bg-dark'>
-      <%= link_to image_tag('Logo.png', size: '30x31', class: 'border rounded'), music_index_path%>
-      <%= form_tag music_index_path, :method => "get" do %>
-        <%= label_tag(:search, "Search a track", style: 'color:white')%>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag("Search", :name=> nil, class: "btn btn-light") %>
-      <% end %>
-      <div>
+      <div style="z-index: 1">
+        <%= link_to image_tag('Logo.png', size: '30x31', class: 'border rounded'), music_index_path%>
+      </div>
+
+      <div style="position:absolute; z-index: 0" class="container-fluid justify-content-center">
+        <%= form_tag music_index_path, :method => "get" do %>
+          <%= label_tag(:search, "Search a track", style: 'color:white')%>
+          <%= text_field_tag :search, params[:search] %>
+          <%= select_tag :type, options_for_select(["Title","Artist","Album","Year"]) %>
+          <%= submit_tag("Search", :name=> nil, class: "btn btn-light") %>
+        <% end %>
+      </div>
+      <div style="z-index: 1" >
         <% if user_signed_in? %>
           <span href="#" style="color: white">Salve <%= current_user.email%></span>
-          <button class="btn btn-light navRight">
-            <%= link_to 'Logout', destroy_user_session_path, class: "logoutBtn", data: {confirm: 'Are you sure to leave?'}, method: "delete" %>
-            <span class="fa.fa-sign-out"></span>
-          </button>
-          <button class="btn btn-light navRight">
-            <%= link_to 'User', edit_user_registration_path, class: "logoutBtn"%>
-          </button>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              Dropdown
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">             
+              <li><%= link_to 'Logout', destroy_user_session_path, class: "dropdown-item", data: {confirm: 'Are you sure to leave?'}, method: "delete" %></li>
+              <li><%= link_to 'User', edit_user_registration_path, class: "dropdown-item"%></li>
+            </ul>
+          </div>
         <% else %>
           <button class="btn btn-light navRight">
             <%= link_to 'Login', new_user_session_path, class: "logoutBtn" %>
