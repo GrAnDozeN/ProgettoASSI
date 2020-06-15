@@ -22,10 +22,10 @@ module NavigationHelpers
       '/music/new'
 
     when /^the Login Page/
-      '/users/sign_in'
+      '/user/sign_in'
 
     when /^the Register Page/
-      '/users/sign_up'
+      '/user/sign_up'
       
     when /^Add Music/
       '/music/new'

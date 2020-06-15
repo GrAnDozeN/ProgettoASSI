@@ -10,23 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_03_150949) do
+ActiveRecord::Schema.define(version: 2020_06_13_113127) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "music_id", null: false
+    t.index ["music_id"], name: "index_favorites_on_music_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
   create_table "musics", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "album"
-    t.string "genre"
-    t.string "year"
+    t.string "title", null: false
+    t.string "author", null: false
+    t.string "album", null: false
+    t.string "genre", null: false
+    t.string "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url", default: "https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg"
+    t.string "preview_id"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_musics_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "musicman"
-    t.text "comments"
-    t.integer "user_id"
-    t.integer "music_id"
+    t.integer "musicman", null: false
+    t.text "comments", null: false
+    t.integer "user_id", null: false
+    t.integer "music_id", null: false
     t.index ["music_id"], name: "index_reviews_on_music_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -42,6 +53,11 @@ ActiveRecord::Schema.define(version: 2020_06_03_150949) do
     t.integer "roles_mask"
     t.string "provider"
     t.string "uid"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

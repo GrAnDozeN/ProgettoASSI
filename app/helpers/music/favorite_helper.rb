@@ -1,0 +1,2 @@
+module Music::FavoriteHelper
+end

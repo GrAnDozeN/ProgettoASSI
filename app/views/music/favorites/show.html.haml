@@ -1,0 +1,28 @@
+-#Body
+%div.container-fluid.mainContainer.displayContainer
+  %h1 Favorites List
+  -#Aggiunta classe Table, per visualizzare una Tabella
+  %table.table#music  
+    %thead
+      %tr
+        %th
+        %th= link_to "Track", :sort => "Title"
+        %th= link_to "Author", :sort => "author"
+        %th= link_to  "Album", :sort => "album"
+        %th= link_to "Genre", :sort => "genre"
+        %th= link_to "Year", :sort => "year"
+    %tbody
+      - @favorites.each do |fav|
+        %tr
+          %td= image_tag fav.music.image_url, :style => "max-height: 100px"
+          %td= fav.music.title
+          %td= fav.music.author 
+          %td= fav.music.album 
+          %td= fav.music.genre 
+          %td= fav.music.year 
+          %td= link_to "Details", music_path(fav.music)
+  
+  -#Bottone per creazione nuovo brano
+  %button.btn.btn-secondary 
+    %span.fa.fa-plus
+    #{link_to "Add new track", new_music_path, {:style=>'color: white; text-decoration: none; font-weight: bold'}}

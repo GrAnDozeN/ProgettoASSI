@@ -226,7 +226,7 @@ Scenario: Can't delete a review as a base user
   When I fill in "Comment" with "un commento"
   And I press "Add a review"
   Then I should be on show a track
-  Then I should not see "Remove"
+  Then I should not see "Delete"
 
 Scenario: Can't delete a track as a base user
   Given I am logged

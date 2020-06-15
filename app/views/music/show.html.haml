@@ -13,13 +13,16 @@
 			%td= @music.album
 		%tr
 			%th{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Year
+			%td= @music.genre
+		%tr
+			%th{:style=>'white-space: nowrap; width: 1%; border-right:1px solid #dee2e6'} Year
 			%td= @music.year 
 		%tr
-			-if (@id_music.present? && (current_user.admin? || current_user.premium?)) 
-				%iframe{:allow => "encrypted-media", :allowtransparency => "true", :frameborder => "1", :height => "80", :src => "https://open.spotify.com/embed/track/" + @id_music, :width => "500", :id=>"preview"}
+			-if (!@music.preview_id.nil? && (user_signed_in?) && (current_user.admin? || current_user.premium?)) 
+				%iframe{:allow => "encrypted-media", :allowtransparency => "true", :frameborder => "1", :height => "80", :src => "https://open.spotify.com/embed/track/" + @music.preview_id, :width => "500", :id=>"preview"}
 
 	%div.container{:style=>"margin-top: 20px"}
-		= social_share_button_tag(@music.title, :url=> "localhost:3000/"+music_path(@music))
+		= social_share_button_tag(:url=> request.original_url, desc: @music.title + " - by " + @music.author)
 
 	-#Divisore
 	%div.container{:style=>'margin-top:20px;'}
@@ -38,6 +41,15 @@
 	%button.btn.btn-light.border 
 		%span.fa.fa-list-ul
 		#{link_to 'Back to track list', music_index_path, :style=>'text-decoration: none;'}
+	- if ((user_signed_in?) && (!current_user.favorites.where(music: @music).empty?))
+		%button.btn.btn-light.border 
+			%span.fa.fa-star
+			#{link_to 'Remove from favorite', favorite_path(:id_music => @music.id), :method => :delete, :style=>'text-decoration: none;'}
+	- else
+		%button.btn.btn-light.border 
+			%span.fa.fa-star-o
+			#{link_to 'Add to favorite', favorite_path(:id_music => @music.id), :method => :put, :style=>'text-decoration: none;'}
+
 
 	-#Divisore
 	%div.container{:style=>'margin-top: 30px'}

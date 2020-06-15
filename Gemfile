@@ -49,6 +49,9 @@ group :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
+  gem 'simplecov', require: false
+  gem 'rails-controller-testing'
+  gem 'rspec-activemodel-mocks'
 end
 
 group :development do
@@ -58,6 +61,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "rspec-rails"
 end
 
 
@@ -75,7 +79,6 @@ gem 'canard', '~> 0.5.0.pre'
 #Add device, for user implementation
 gem 'devise'
 gem "selenium-webdriver"
-gem "rspec-rails"
 gem "omniauth-facebook"
 
 gem 'social-share-button'

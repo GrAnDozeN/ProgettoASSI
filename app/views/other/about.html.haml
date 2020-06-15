@@ -1,0 +1,20 @@
+.container{:style => "margin-top: 20px"}
+
+    .row
+        .col-sm-4
+            %img.img-thumbnail{:src => "assets/Logo.png", :style => "max-height: auto"}
+        .col-sm-8
+            //  Descizione del sito
+            %span Questa è la descizione del sito
+
+    .row{:style => "margin-top :50px"}
+        //  Lista dei Dev
+        -@listDev.each do |dev|
+            .col-sm.border.border-dark.rounded{:style=>"margin:10px; padding:20px"}
+                %div.text-center
+                    %img.img-thumbnail{:src => dev[:pic], :style => "max-height: 100px; border-radius:50%"}
+                %div.text-center{:style => "margin-top: 20px"}
+                    .span{:style=>"background-color: red"} One of three columns
+                %div
+                    //  Link to Contac Dev -> da sistemare
+                    .link Contatta questo sviluppatore   

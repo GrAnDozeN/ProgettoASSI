@@ -1,38 +1,45 @@
 
 class MusicController < ApplicationController
 	skip_before_action :verify_authenticity_token
-	before_action :authenticate_user!
 	require 'net/http'
 	require 'base64'
 	require 'json'
 
 	def index
-		#@musics = Music.all
 		if (params[:search] && params[:search]!= "")
-			@musics = Music.where(title: params[:search])
+
+			if (params[:type] == "Title")
+				@musics = Music.where(title: params[:search])
+			elsif (params[:type] == "Artist")
+				@musics = Music.where(author: params[:search])
+			elsif (params[:type] == "Album")
+				@musics = Music.where(album: params[:search])
+			elsif (params[:type] == "Year")
+				@musics = Music.where(Year: params[:search])
+			end
+
 		else
 			@musics = Music.all
 		end
-		#	Token
-		#	Cerca l'album del brano
-		uri = URI ('https://api.spotify.com/v1/search')
-		http = Net::HTTP.new(uri.host, uri.port)
-		@tok_spotify = getToken
 
-		#if (!$tok_spotify.present?)
-		#	$tok_spotify = getToken
-		#end
+		@musics = @musics.order(params[:sort])
+	end
 
-		header_auth = "Bearer " + @tok_spotify
-		http.use_ssl=true
-		@albums = Hash.new
-		@musics.each do |music|
+
+	def create
+		if !(Music.exists?(:title=>params[:music][:title], :author=>params[:music][:author], :genre=>params[:music][:genre], :year=>params[:music][:year]))
+
+			uri = URI ('https://api.spotify.com/v1/search')
+			http = Net::HTTP.new(uri.host, uri.port)
+			@tok_spotify = getToken
+
+			header_auth = "Bearer " + @tok_spotify
+			http.use_ssl=true
 			data = {
-				:q => "album:" + music.album + " artist:" + music.author + " track:" + music.title,
+				:q => "album:" + params[:music][:album] + " artist:" + params[:music][:author] + " track:" + params[:music][:title],
 				:type => "track",
 				:market => "US"
-			}
-			
+			}			
 			uri.query = URI.encode_www_form(data).gsub("+","%20")
 			request = Net::HTTP::Get.new(uri, {'Authorization' => header_auth})
 			@response = http.request(request)
@@ -47,68 +54,47 @@ class MusicController < ApplicationController
 			@response = JSON.parse(@response.body)
 			
 			if (@response["tracks"]["total"] == 0)
-				@albums.merge!({music.title => "https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg"})
+				@album = "https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg"
 			else
-				@albums.merge!({music.title => @response["tracks"]["items"][0]["album"]["images"][0]["url"]})
+				@album = @response["tracks"]["items"][0]["album"]["images"][0]["url"]
+				@id_music = @response["tracks"]["items"][0]["id"]
 			end
-		end
-	end
 
-	def create
-		if !(Music.exists?(:title=>params[:music][:title], :author=>params[:music][:author], :genre=>params[:music][:genre], :year=>params[:music][:year]))
-			@music = Music.create!(params[:music].permit(:title,:author,:album,:genre,:year))
-			authorize! :create, @music, :message => "Attenzione: Non sei autorizzato a creare nuovi brani"
+
+			#authorize! :create, @music, :message => "Attenzione: Non sei autorizzato a creare nuovi brani"
+			params[:music].merge!(user_id: current_user.id)
+
+			@music = Music.create!(params[:music].permit(:title,:author,:album,:genre,:year, :user_id))
+			@music.update_attribute(:image_url, @album)
+			@music.update_attribute(:preview_id, @id_music)
+			
+			#@music.update_attribute(:User_id, current_user.id)
+
+			
 			redirect_to music_path(@music)
 		else
 			redirect_to music_index_path
 		end
 	end
 
+
 	def show
         id = params[:id]
         if Music.exists?(id)
 			@music = Music.find(id)
 			@reviews = Review.where(:music_id=>id)
-
-			# Token
-
-			# Url Preview
-			@tok_spotify = getToken
-			uri = URI ('https://api.spotify.com/v1/search')
-			http = Net::HTTP.new(uri.host, uri.port)
-			header_auth = "Bearer " + @tok_spotify
-			http.use_ssl=true
-			@albums = Hash.new
-
-			data = {
-				:q => "album:" + @music.album + " artist:" + @music.author + " track:" + @music.title,
-				:type => "track",
-				:market => "US"
-			}
-			data = URI.encode_www_form(data).gsub("+","%20")
-			uri.query = data
-
-			request = Net::HTTP::Get.new(uri, {'Authorization' => header_auth})
-			@response = http.request(request)
-
-			#if(@response.code == 400)
-			#	$tok_spotify = getToken
-			#	header_auth = "Bearer " + $tok_spotify
-			#	request = Net::HTTP::Get.new(uri, {'Authorization' => header_auth})
-			#	@response = http.request(request)
-			#end
-
-			if (@response.is_a?(Net::HTTPOK) && JSON.parse(@response.body)["tracks"]["total"] != 0)
-				@response = JSON.parse(@response.body)
-				@id_music = @response["tracks"]["items"][0]["id"]
-			end
         else
         	render html: 'Track does not exit'
         end
 	end
 
+
 	def new
+		if !user_signed_in?
+			redirect_to new_user_session_path()
+		end
 	end
+
 
 	def destroy
 		id = params[:id]
@@ -118,19 +104,52 @@ class MusicController < ApplicationController
 		redirect_to music_index_path
 	end
 
+
 	def update
         id = params[:id]
 		@music = Music.find(id)
 		authorize! :update, @music, :message => "Attenzione: Non sei autorizzato ad aggiornare brani"
 		@music.update_attributes!(params[:music].permit(:title, :author, :album, :genre, :year))
-        redirect_to music_path(@music)
-    end
+		
+		#	Cambio Album Cover + ID per preview Spotify
+		uri = URI ('https://api.spotify.com/v1/search')
+		http = Net::HTTP.new(uri.host, uri.port)
+		@tok_spotify = getToken
+		header_auth = "Bearer " + @tok_spotify
+		http.use_ssl=true
+		data = {
+			:q => "album:" + params[:music][:album] + " artist:" + params[:music][:author] + " track:" + params[:music][:title],
+			:type => "track",
+			:market => "US"
+		}			
+		uri.query = URI.encode_www_form(data).gsub("+","%20")
+		request = Net::HTTP::Get.new(uri, {'Authorization' => header_auth})
+		@response = http.request(request)
+		@response = JSON.parse(@response.body)
+		
+		if (@response["tracks"]["total"] == 0)
+			@album = "https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg"
+		else
+			@album = @response["tracks"]["items"][0]["album"]["images"][0]["url"]
+			@id_music = @response["tracks"]["items"][0]["id"]
+		end
+		@music.update_attribute(:image_url, @album)
+		@music.update_attribute(:preview_id, @id_music)
+
+		redirect_to music_path(@music)
+	end
+	
 
 	def edit
+		if !user_signed_in?
+			redirect_to new_user_session_path()
+		end
+
 		id = params[:id]
 		@music = Music.find(id)
 		authorize! :update, @music
 	end
+
 
 	def getToken
 		uri = URI ('https://accounts.spotify.com/api/token')

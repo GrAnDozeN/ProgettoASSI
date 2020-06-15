@@ -51,6 +51,13 @@ Given "I am logged" do
   fill_in("user_password", :with=>"password")
   fill_in("user_password_confirmation", :with=>"password")
   click_button("Sign up")
+  user = User.find(1)
+  user.confirmed_at = Time.zone.now
+  user.save
+  visit path_to("the Login Page")
+  fill_in("user_email", :with=>"guest@gmail.com")
+  fill_in("user_password", :with=>"password")
+  click_button("Log in")
 end
 
 Given "I am logged as admin" do
@@ -61,7 +68,12 @@ Given "I am logged as admin" do
   click_button("Sign up")
   user = User.find(1)
   user.roles_mask = 2
+  user.confirmed_at = Time.zone.now
   user.save
+  visit path_to("the Login Page")
+  fill_in("user_email", :with=>"admin@gmail.com")
+  fill_in("user_password", :with=>"password")
+  click_button("Log in")
 end
 
 Then /^I should (not )?see the preview$/ do |negate|
