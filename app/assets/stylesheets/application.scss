@@ -21,6 +21,7 @@
 .mainContainer{
     margin-top: 10px;
     max-width: 1024px;
+    min-height: calc(100% - 183px);
 }
 
 .displayContainer{
@@ -34,4 +35,8 @@
         width: 35px;
         margin-left: 20px
     }
+}
+
+html, body {
+    height: 100%;
 }

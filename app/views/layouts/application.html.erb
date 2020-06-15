@@ -55,8 +55,12 @@
           <% end %>
       </div>
     </nav>
-    <div class="container-fluid mainContainer displyaContainer">
+    <div class="container-fluid mainContainer displyaContainer" style="margin-bottom:75px">
       <%= yield %>
     </div>
+
+    <footer class="text-center container-fluid" style="background-color: black; padding: 10px;">
+      <%= link_to 'About us', about_path, style: "color: lightgrey" %>
+    </footer>
   </body>
 </html>

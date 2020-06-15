@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
 	get '/about' => "other#about"
 	get '/contact' => "other#contact"
-	post '/contact' => "other#send"
+	post '/contact' => "other#sendMail"
 end
