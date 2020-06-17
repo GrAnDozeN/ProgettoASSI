@@ -5,8 +5,7 @@
             %img.img-thumbnail{:src => "assets/Logo.png", :style => "background-color:lightgrey; padding:10px"}
         .col-sm-8
             //  Descizione del sito
-            %span Questa è la descizione del sito
-
+            %span Musicman is a rails developed web-app that allows the users to share and review tracks from the library.
     .row{:style => "margin-top :50px"}
         //  Lista dei Dev
         -@listDev.each do |dev|
@@ -14,7 +13,7 @@
                 %div.text-center
                     %img.img-thumbnail{:src => dev[:pic], :style => "max-height: 100px; border-radius:50%"}
                 %div.text-center{:style => "margin-top: 20px"}
-                    .span{:style=>"background-color: red"} One of three columns
+                    .span{:style=>"background-color: lightgrey; border-radius: 10px"} #{dev[:description]}
                 %div.text-center{:style => "margin-top: 50px"}
                     =button_to(contact_path, method: :get, class:'btn btn-secondary', ) do
                         %span.fa.fa-envelope-o{:style=>'color: white; text-decoration: none; font-weight: bold'}

@@ -42080,3 +42080,1824 @@ Processing by MusicController#show as HTML
 Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/music/20" for 127.0.0.1 at 2020-06-16 01:44:42 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/music/20" for 127.0.0.1 at 2020-06-16 01:44:56 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/music" for 127.0.0.1 at 2020-06-16 01:45:00 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMusics (20200429133545)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "album" varchar, "genre" varchar, "year" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200429133545_create_musics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200429133545"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateReview (20200506122845)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "musicman" integer, "comments" text, "user_id" integer, "music_id" integer)[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200506122845_create_review.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200506122845"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to DeviseCreateUsers (20200514150526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200514150526_devise_create_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200514150526_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20200514150526_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200514150526"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddRolesMaskToMusicgoers (20200522132620)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "roles_mask" integer[0m
+  ↳ db/migrate/20200522132620_add_roles_mask_to_musicgoers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200522132620"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddOmniauthToUsers (20200603150949)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" varchar[0m
+  ↳ db/migrate/20200603150949_add_omniauth_to_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  ↳ db/migrate/20200603150949_add_omniauth_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200603150949"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddConfirmableTDevise (20200605113006)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" varchar[0m
+  ↳ db/migrate/20200605113006_add_confirmable_t_devise.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" datetime[0m
+  ↳ db/migrate/20200605113006_add_confirmable_t_devise.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" datetime[0m
+  ↳ db/migrate/20200605113006_add_confirmable_t_devise.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" varchar[0m
+  ↳ db/migrate/20200605113006_add_confirmable_t_devise.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/migrate/20200605113006_add_confirmable_t_devise.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200605113006"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddFavoriteToUsers (20200605215236)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "music_id" integer)[0m
+  ↳ db/migrate/20200605215236_add_favorite_to_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  ↳ db/migrate/20200605215236_add_favorite_to_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_music_id" ON "favorites" ("music_id")[0m
+  ↳ db/migrate/20200605215236_add_favorite_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200605215236"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddPictureUrlToMusic (20200605234718)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "musics" ADD "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg'[0m
+  ↳ db/migrate/20200605234718_add_picture_url_to_music.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200605234718"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddPreviewUrlToMusic (20200606001544)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "musics" ADD "preview_id" varchar[0m
+  ↳ db/migrate/20200606001544_add_preview_url_to_music.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200606001544"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddUserCreatorToMusic (20200606005540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "musics" ADD "user_id" integer[0m
+  ↳ db/migrate/20200606005540_add_user_creator_to_music.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200606005540_add_user_creator_to_music.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200606005540"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to ValidateMusic (20200609143045)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amusics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "author" varchar DEFAULT NULL, "album" varchar DEFAULT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_amusics_on_user_id" ON "amusics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amusics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar DEFAULT NULL, "album" varchar DEFAULT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "musics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amusics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar DEFAULT NULL, "album" varchar DEFAULT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "tindex_amusics_on_user_id" ON "amusics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amusics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar DEFAULT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "musics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amusics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar DEFAULT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_amusics_on_user_id" ON "amusics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amusics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar NOT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "musics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amusics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar NOT NULL, "genre" varchar DEFAULT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_amusics_on_user_id" ON "amusics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amusics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar NOT NULL, "genre" varchar NOT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "musics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amusics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar NOT NULL, "genre" varchar NOT NULL, "year" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_amusics_on_user_id" ON "amusics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "amusics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "musics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "musics" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "author" varchar NOT NULL, "album" varchar NOT NULL, "genre" varchar NOT NULL, "year" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_url" varchar DEFAULT 'https://img.bhs4.com/2a/0/2a05500a3a3ef626426fbca6efb69017863992af_large.jpg', "preview_id" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_musics_on_user_id" ON "musics" ("user_id")[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "musics" ("id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id")
+                     SELECT "id","title","author","album","genre","year","created_at","updated_at","image_url","preview_id","user_id" FROM "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amusics"[0m
+  ↳ db/migrate/20200609143045_validate_music.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200609143045"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddNotNullForReview (20200613100952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer DEFAULT NULL, "comments" text DEFAULT NULL, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_music_id" ON "areviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_user_id" ON "areviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text DEFAULT NULL, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "reviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text DEFAULT NULL, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_music_id" ON "areviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_user_id" ON "areviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text NOT NULL, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text NOT NULL, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_music_id" ON "areviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_user_id" ON "areviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text NOT NULL, "user_id" integer NOT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text NOT NULL, "user_id" integer NOT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_music_id" ON "areviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areviews_on_user_id" ON "areviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer NOT NULL PRIMARY KEY, "musicman" integer NOT NULL, "comments" text NOT NULL, "user_id" integer NOT NULL, "music_id" integer NOT NULL)[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_music_id" ON "reviews" ("music_id")[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reviews" ("id","musicman","comments","user_id","music_id")
+                     SELECT "id","musicman","comments","user_id","music_id" FROM "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areviews"[0m
+  ↳ db/migrate/20200613100952_add_not_null_for_review.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200613100952"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddNotNullToFavorite (20200613113127)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afavorites" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afavorites_on_music_id" ON "afavorites" ("music_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afavorites_on_user_id" ON "afavorites" ("user_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "afavorites" ("id","user_id","music_id")
+                     SELECT "id","user_id","music_id" FROM "favorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "favorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_music_id" ON "favorites" ("music_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "favorites" ("id","user_id","music_id")
+                     SELECT "id","user_id","music_id" FROM "afavorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "afavorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afavorites" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "music_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afavorites_on_music_id" ON "afavorites" ("music_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afavorites_on_user_id" ON "afavorites" ("user_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "afavorites" ("id","user_id","music_id")
+                     SELECT "id","user_id","music_id" FROM "favorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "favorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "music_id" integer NOT NULL)[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_music_id" ON "favorites" ("music_id")[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "favorites" ("id","user_id","music_id")
+                     SELECT "id","user_id","music_id" FROM "afavorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "afavorites"[0m
+  ↳ db/migrate/20200613113127_add_not_null_to_favorite.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200613113127"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 23:45:26.000387"], ["updated_at", "2020-06-15 23:45:26.000387"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/bin/rake:23
+Started GET "/music" for 127.0.0.1 at 2020-06-16 01:45:43 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (14.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 366ms (Views: 360.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-16 01:45:58 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered user/registrations/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 84ms (Views: 71.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-06-16 01:46:07 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kgd2Tk40dCK1v/qcwWL/JRLKUTslF4M0fKnp5NWQyZXcA8zeDcc8cfvR2A1KVolxRw4ab6sx3Xf+BnnChWZq3Q==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.admin"], ["encrypted_password", "$2a$11$CU4xEcqmJTW/5l9w6X6enOOiq3.XKyNFl1NGFmof5hlLLkmpR2uP."], ["created_at", "2020-06-15 23:46:07.798873"], ["updated_at", "2020-06-15 23:46:07.798873"], ["confirmation_token", "oa43GzRfkfWoPM1Kk8m-"], ["confirmation_sent_at", "2020-06-15 23:46:07.798973"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/confirmation_instructions.html.erb
+  Rendered user/mailer/confirmation_instructions.html.erb (0.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 32.8ms
+Sent mail to admin@admin.admin (134.0ms)
+Date: Tue, 16 Jun 2020 01:46:07 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: admin@admin.admin
+Message-ID: <5ee8083fce69e_12ed2affe3d6c73019090@grandozen-VBDesk.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome admin@admin.admin!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/user/confirmation?confirmation_token=oa43GzRfkfWoPM1Kk8m-">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 288ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-16 01:46:07 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-16 01:46:07 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-16 01:46:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/confirmation?confirmation_token=oa43GzRfkfWoPM1Kk8m-" for 127.0.0.1 at 2020-06-16 01:46:18 +0200
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"oa43GzRfkfWoPM1Kk8m-"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "oa43GzRfkfWoPM1Kk8m-"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2020-06-15 23:46:18.756226"], ["updated_at", "2020-06-15 23:46:18.756845"], ["id", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 41ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-16 01:46:18 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (7.4ms)
+  Rendered user/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-16 01:46:24 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJj671K/rH69rAq61Dp04XVPaiHXyyJEmzS+NkB1UZ3FNP+2fn2t+dglnG0iXeXKqfFKQ4fEFNGPK5dEQFiV/g==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-16 01:46:24 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-16 01:46:24 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-06-16 01:46:26 +0200
+Processing by MusicController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:93
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-06-16 01:46:41 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8y2mpdtx28nakvOnOIyGMxThWVyrhltSU8S3vBK6UHmWTNr602AnmylC1ldK/EEqn6W+vZhMQWnlIBX1fpi/5w==", "music"=>{"title"=>"Titolo", "author"=>"Autore", "album"=>"Album", "genre"=>"Rock", "year"=>"1980"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" = ? AND "musics"."author" = ? AND "musics"."genre" = ? AND "musics"."year" = ? LIMIT ?[0m  [["title", "Titolo"], ["author", "Autore"], ["genre", "Rock"], ["year", "1980"], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:65
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:67
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Titolo"], ["author", "Autore"], ["album", "Album"], ["genre", "Rock"], ["year", "1980"], ["created_at", "2020-06-15 23:46:42.188838"], ["updated_at", "2020-06-15 23:46:42.188838"], ["user_id", 1]]
+  ↳ app/controllers/music_controller.rb:67
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:69
+Redirected to http://localhost:3000/music/1
+Completed 302 Found in 327ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/music/1" for 127.0.0.1 at 2020-06-16 01:46:42 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:83
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:84
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:34
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 1]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 11:54:16 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/music" for 127.0.0.1 at 2020-06-17 11:54:16 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (17.0ms)
+Completed 200 OK in 342ms (Views: 335.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:54:22 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered user/sessions/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 130ms (Views: 90.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/auth/facebook.facebook" for 127.0.0.1 at 2020-06-17 11:55:26 +0200
+Processing by Users::OmniauthCallbacksController#passthru as 
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:55:36 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j48xol3NTsaogIZjkYZhVypeqYwaCE+wuHNpWR5Z+5m3ZrsugcC2EYQj4XKVqBxpqVoo92zm2S3Qxsnrqs+H2A==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j48xol3NTsaogIZjkYZhVypeqYwaCE+wuHNpWR5Z+5m3ZrsugcC2EYQj4XKVqBxpqVoo92zm2S3Qxsnrqs+H2A==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 150ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:55:43 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhgF1w1mgXMHTlY1S15wi39RedmRdY+i44/oqnuaDfqxVa+pBu9j2xbBy0KbAx9QzPa3d2XS8bLmRAdrXmyXKw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhgF1w1mgXMHTlY1S15wi39RedmRdY+i44/oqnuaDfqxVa+pBu9j2xbBy0KbAx9QzPa3d2XS8bLmRAdrXmyXKw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered user/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 135ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 11:55:50 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (3.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/registrations/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-06-17 11:55:57 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MbqwadTDI68PKf57E4rknREXZSjbPVCvwd5ucGA7c7EuAxhqHFXf71VfU+qMC5jEkoABRKRffQdfqLDHmh3Dpw==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "guest@gmail.com"], ["encrypted_password", "$2a$11$zddzzNtoKoaTThwuEPDk0e1cUuk5J.QoyWhYI7hntR1M744IPpPg2"], ["created_at", "2020-06-17 09:55:57.164243"], ["updated_at", "2020-06-17 09:55:57.164243"], ["confirmation_token", "x8rxhKpjt5Z8Xdg7_F5v"], ["confirmation_sent_at", "2020-06-17 09:55:57.164338"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/confirmation_instructions.html.erb
+  Rendered user/mailer/confirmation_instructions.html.erb (0.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 52.0ms
+Sent mail to guest@gmail.com (164.0ms)
+Date: Wed, 17 Jun 2020 11:55:57 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: guest@gmail.com
+Message-ID: <5ee9e8ad382ce_17af2ab573e657f0978d0@grandozen-VBDesk.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome guest@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/user/confirmation?confirmation_token=x8rxhKpjt5Z8Xdg7_F5v">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 337ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 11:55:58 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 11:55:58 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:56:02 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/confirmation?confirmation_token=x8rxhKpjt5Z8Xdg7_F5v" for 127.0.0.1 at 2020-06-17 11:56:20 +0200
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"x8rxhKpjt5Z8Xdg7_F5v"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "x8rxhKpjt5Z8Xdg7_F5v"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2020-06-17 09:56:20.502320"], ["updated_at", "2020-06-17 09:56:20.502744"], ["id", 2]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 11ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:56:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-17 11:56:27 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"quCI6Pry7A/9EGW4FdOE7shkkTuXOsUXZZPW46PoaiNFrSKW8XsOp+yf+M/Fjus1e8NflWOduwdgWDkihh7w8g==", "user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 105ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 11:56:27 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 11:56:27 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2020-06-17 11:56:33 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/registrations/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered user/registrations/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 11:56:37 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 11:56:43 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 11:58:27 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (6.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 11:59:39 +0200
+Started GET "/" for 127.0.0.1 at 2020-06-17 11:59:49 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 11:59:49 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 11:59:54 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:00:41 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:00:42 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-17 12:00:50 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-17 12:00:59 +0200
+Processing by OtherController#contact as HTML
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:00:59 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.8ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:03:04 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:04:18 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:05:55 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered user/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 122ms (Views: 96.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/user/assets/Logo.png" for 127.0.0.1 at 2020-06-17 12:05:55 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/Logo.png"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:05:58 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:05:58 +0200
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:06:56 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:15 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (13.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:07:23 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I4Rz8+7fndemUwZHhN1hzPkSB6ocJ5ZwEG2bnxqCopS5kA/PgSv83tGiJ7EB+Ky7n5BxmZ1GDOcsjA0reXq8iA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:07:23 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:07:26 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:07:28 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:07:29 +0200
+Started GET "/user/auth/facebook/callback?code=AQDoD9ff4CoUlnPECce_bbOHaAg76R8RCHLkdTOtPFryi1yloQf64uVuGxmqgphhCC69cejdM-86MB7UqofORrBidGc4KbHV1WGrmp_1zrPw5A8vYTF8uA65Y8MaxY8D6hwbA5U8BLPYXlS6ZG9AVQGajGErTEweSqqiYngg-7T1Yuy1om9u6QFZZN6LRKeJN4vL_R-1iylcHuVFkOYqKq5V9vtlWTRBC-FMBO3eKDVdCuvnV0ImmXEOC3NO-l_ybWj7Kco1IPhITgRHBYb7ijiKRoOJF_OGzWFIW53TyDFdnnSIq7IeJZVeu2dNVm90qbnYafX0q1VBm5uKnHJf2wUV&state=d9adf229942b1a89ea808a46a9d3711890d59cda0148437d" for 127.0.0.1 at 2020-06-17 12:07:29 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDoD9ff4CoUlnPECce_bbOHaAg76R8RCHLkdTOtPFryi1yloQf64uVuGxmqgphhCC69cejdM-86MB7UqofORrBidGc4KbHV1WGrmp_1zrPw5A8vYTF8uA65Y8MaxY8D6hwbA5U8BLPYXlS6ZG9AVQGajGErTEweSqqiYngg-7T1Yuy1om9u6QFZZN6LRKeJN4vL_R-1iylcHuVFkOYqKq5V9vtlWTRBC-FMBO3eKDVdCuvnV0ImmXEOC3NO-l_ybWj7Kco1IPhITgRHBYb7ijiKRoOJF_OGzWFIW53TyDFdnnSIq7IeJZVeu2dNVm90qbnYafX0q1VBm5uKnHJf2wUV", "state"=>"d9adf229942b1a89ea808a46a9d3711890d59cda0148437d"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:17
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foxyseta1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "provider", "uid", "confirmed_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "foxyseta1@gmail.com"], ["encrypted_password", "$2a$11$cBFWyH3YsTzfGPBrc9TSpuYFkJSTgLew4z.7LBpX7cH49j0jG4Q7W"], ["created_at", "2020-06-17 10:07:30.240303"], ["updated_at", "2020-06-17 10:07:30.240303"], ["provider", "facebook"], ["uid", "2957085504329190"], ["confirmed_at", "2020-06-17 10:07:30.132727"]]
+  ↳ app/models/user.rb:17
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 118ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:07:30 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:30 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:07:44 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kmozUNGs5HiLCMK2BgLgJ4tyj3fOkmtxPxygt/YAHMNu/6Te4TFOJEm+Pnqxnhi0+9+fJCDfj3L/JHp62Bdg4g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:07:44 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:44 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:07:47 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/registrations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/confirmation/new" for 127.0.0.1 at 2020-06-17 12:07:48 +0200
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendering user/confirmations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered user/confirmations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:07:52 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:07:52 +0200
+Started GET "/user/auth/facebook/callback?code=AQCXzhiHOM8Bim__nohwAs_AoAxvLGn4PZK9HUYWgWEjEXVBzG3m7zBzIHOeIkXyz1r9BrBakBt8e2bHFQobKE3A0ijGR2KArR3d7rDKPM9XmLGl07yL0UwFJzA98uQGdkHKUo5Ahp1Nt0czJJlXQFhiFvk3nxlbg8qHdjzcAplhRFFAl8YRNI082VIjyrWgVDdHhYJ7kwFh-og4m_HnfmrZxRtuQPVH0lJzhte6LFHbKlAp877iU8dGzyzKXoSbRn8cXCZO9mIqMu0nF2btxfgNt6PxMUgdwN1SszFZCWBdMTk6La8xMydu9IsEdhtTcst02tPSkfFLL3a0Ds3lPlc3&state=11eec81930348ccd53fffa65241d71b34702b4bdeca8116e" for 127.0.0.1 at 2020-06-17 12:07:52 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCXzhiHOM8Bim__nohwAs_AoAxvLGn4PZK9HUYWgWEjEXVBzG3m7zBzIHOeIkXyz1r9BrBakBt8e2bHFQobKE3A0ijGR2KArR3d7rDKPM9XmLGl07yL0UwFJzA98uQGdkHKUo5Ahp1Nt0czJJlXQFhiFvk3nxlbg8qHdjzcAplhRFFAl8YRNI082VIjyrWgVDdHhYJ7kwFh-og4m_HnfmrZxRtuQPVH0lJzhte6LFHbKlAp877iU8dGzyzKXoSbRn8cXCZO9mIqMu0nF2btxfgNt6PxMUgdwN1SszFZCWBdMTk6La8xMydu9IsEdhtTcst02tPSkfFLL3a0Ds3lPlc3", "state"=>"11eec81930348ccd53fffa65241d71b34702b4bdeca8116e"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:07:53 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:53 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:07:58 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H+V3/BChAVtAGQkK5YiaN8SEwRcoVwJSgjyz+1k0HEdRAeuGW7X/WUMp8xG0Mmg71fU4dJnpCQD9i/zoVVxHjw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:07:58 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:07:59 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:08:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered user/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:08:09 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:08:09 +0200
+Started GET "/user/auth/facebook/callback?code=AQByDmlPxlyi0e7OR9a2-4fqyqzOfuQgZZ7d5EEtx0lJaDnOPBObTdMoqtBtovkjhLc0LSB4jwInXT1VlM7wme0WTaXNh-maQUHroVhJ9RTjebQl40oKEkYqe7v5AGzUPXXD6HhYSI_6SUJ9AV1K7fKcjbeNZT__fr6ky90dyejMXvxprUjEhshocejY76cNTXsiSjtAsK6DsQ1IYKcmyedAuxAHcETAs1-1BHCi8xD0O81gMel5cfcd1iipPrkKPRQ5V0BN3I-XlGMI8MlfsLzkDk1fS2sfRec-syHkx7NpS2IwskodGTMBOMPH8T1c6cSCC7u2h9P-zx3RQaIGsWgC&state=8f7c30111e24e393591b97016a46a6780b38de1be9b8807b" for 127.0.0.1 at 2020-06-17 12:08:10 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQByDmlPxlyi0e7OR9a2-4fqyqzOfuQgZZ7d5EEtx0lJaDnOPBObTdMoqtBtovkjhLc0LSB4jwInXT1VlM7wme0WTaXNh-maQUHroVhJ9RTjebQl40oKEkYqe7v5AGzUPXXD6HhYSI_6SUJ9AV1K7fKcjbeNZT__fr6ky90dyejMXvxprUjEhshocejY76cNTXsiSjtAsK6DsQ1IYKcmyedAuxAHcETAs1-1BHCi8xD0O81gMel5cfcd1iipPrkKPRQ5V0BN3I-XlGMI8MlfsLzkDk1fS2sfRec-syHkx7NpS2IwskodGTMBOMPH8T1c6cSCC7u2h9P-zx3RQaIGsWgC", "state"=>"8f7c30111e24e393591b97016a46a6780b38de1be9b8807b"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:08:12 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:08:12 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:09:03 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mqGx2+27FSRzjPFE6AguG9wilCzqv2A/CCn16tHTjtmZ2Z9qh4oEaEB2OlKymyU+757HeayXcZXG2OTThgNcQQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:09:03 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:09:03 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:09:05 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered user/registrations/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 113ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:09:11 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:09:12 +0200
+Started GET "/user/auth/facebook/callback?code=AQCt2oRKakRqqtD97fk7strGq-y-KhTPXv4zJUHWMQM2aoOXUw45jsNCSf1bTZFKsonZ6k-JPi0vlCxhPcQqF2C90CE0Q7-mAVA_0cfXFhOF2TN_gSfHj3gkHup8sJwaPrgXIAJlHHVwK5pyljJ9UEDjyCQI2yRs5o8YG6180zJZxgP9cgbkFDobMg1ADtiAfaamlr1AIcrk6bFe3-fRmBhq5l7ca_CWpZmnqYyoBZhHSvTkNx6UJqHn8A9TFxHQu4ibW1z_5IOXfbBy6E_fAeJm7rRFImqGOF122hSCTy_HjTFYp_tfLSmN9mkBtjLwwvTzSdjanJE8dH2HnWAXUyoo&state=bd003dc9d03d64059e76583656e0aeb434913e21cdb833c4" for 127.0.0.1 at 2020-06-17 12:09:12 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCt2oRKakRqqtD97fk7strGq-y-KhTPXv4zJUHWMQM2aoOXUw45jsNCSf1bTZFKsonZ6k-JPi0vlCxhPcQqF2C90CE0Q7-mAVA_0cfXFhOF2TN_gSfHj3gkHup8sJwaPrgXIAJlHHVwK5pyljJ9UEDjyCQI2yRs5o8YG6180zJZxgP9cgbkFDobMg1ADtiAfaamlr1AIcrk6bFe3-fRmBhq5l7ca_CWpZmnqYyoBZhHSvTkNx6UJqHn8A9TFxHQu4ibW1z_5IOXfbBy6E_fAeJm7rRFImqGOF122hSCTy_HjTFYp_tfLSmN9mkBtjLwwvTzSdjanJE8dH2HnWAXUyoo", "state"=>"bd003dc9d03d64059e76583656e0aeb434913e21cdb833c4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:09:12 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:09:12 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "roles_mask" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-06-17 10:09:59.932880"], ["roles_mask", 3], ["id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:10:12 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:10:12 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:10:15 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:10:22 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BN4X19H0c3nUhU1I6tWtbvuGv+eT3/5Zg7uukwoAGqZ9CQ+o9JYFyAtxsSw6sKhiLHUDjPh3VC/R9HUpjt/b8A==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 108ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:10:22 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:10:22 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (1.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-17 12:10:27 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 77ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/3" for 127.0.0.1 at 2020-06-17 12:10:29 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/3" for 127.0.0.1 at 2020-06-17 12:10:31 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dHLiRsOz9FOB0pb2YtpQDUjVc9/3gL3vkxtwRqeT8n+xPU05DzZ/N/PzDAn9dE7w7UIGAIZakYwVbBfym5/yg==", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-17 12:10:31 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:10:50 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/user/2" for 127.0.0.1 at 2020-06-17 12:11:00 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2020-06-17 12:11:04 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."roles_mask" & 2 > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "roles_mask" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-06-17 10:11:42.391717"], ["roles_mask", 2], ["id", 1]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/user" for 127.0.0.1 at 2020-06-17 12:11:45 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:20:27 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H7baG+MIFA4rfwbrceKPvi6Gw9lLj7JWn9BQfg3c16VUJVK19a1bTsGkyFdSNsEW3HIWGOtzZW/p3YGJrEClog=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:20:27 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:20:27 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:20:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook.facebook" for 127.0.0.1 at 2020-06-17 12:20:34 +0200
+Processing by Users::OmniauthCallbacksController#passthru as 
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:20:38 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-17 12:20:38 +0200
+Started GET "/user/auth/facebook/callback?code=AQB8FtL_1D0tJXsVsAcVMjwZRap57Qdug5TvPPpbh_Y7bmBJ0Tq7nINIfvLuG7wANpF-1RLJZg9IyihHQ9r3pGS87mPmIiJEXgQ3ca1lKT3X7BCxFLZ0viz5rfHYQQQC2pHq13QixZsCgQNeEZKbBO7scKn-TkEnYR80xKNJBcFKqfg-74K3nQa_JdGHlHTTJ5zUGvOhSXTr5Iaj3JokNva8GAUPpe6pH1DPj6KRHCl-xnprCDG_x8-v_Vci2KsEArGBSVUedEApNUQHv47QXDNly7S6Bd8MYNy-UJjiEHkqUnJakt4s6Hc38yA_DZGnbu8oAn0I-1j99tEA3nS5Okz-&state=e9cdae20ad530d641a908b958b53d95efc329d605f0b298d" for 127.0.0.1 at 2020-06-17 12:20:38 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB8FtL_1D0tJXsVsAcVMjwZRap57Qdug5TvPPpbh_Y7bmBJ0Tq7nINIfvLuG7wANpF-1RLJZg9IyihHQ9r3pGS87mPmIiJEXgQ3ca1lKT3X7BCxFLZ0viz5rfHYQQQC2pHq13QixZsCgQNeEZKbBO7scKn-TkEnYR80xKNJBcFKqfg-74K3nQa_JdGHlHTTJ5zUGvOhSXTr5Iaj3JokNva8GAUPpe6pH1DPj6KRHCl-xnprCDG_x8-v_Vci2KsEArGBSVUedEApNUQHv47QXDNly7S6Bd8MYNy-UJjiEHkqUnJakt4s6Hc38yA_DZGnbu8oAn0I-1j99tEA3nS5Okz-", "state"=>"e9cdae20ad530d641a908b958b53d95efc329d605f0b298d"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:17
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foxyseta1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "provider", "uid", "confirmed_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "foxyseta1@gmail.com"], ["encrypted_password", "$2a$11$moKjF/BN2W1Sz2x8oqbZQ.Xiqjzvo7ul2G3pnFJeyfTiFBLu7xa6e"], ["created_at", "2020-06-17 10:20:39.256103"], ["updated_at", "2020-06-17 10:20:39.256103"], ["provider", "facebook"], ["uid", "2957085504329190"], ["confirmed_at", "2020-06-17 10:20:39.135759"]]
+  ↳ app/models/user.rb:17
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:20:39 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:20:39 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.7ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:20:55 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/174STEm/I/n+ywdP2dCDeaDY9steGcWyxZbIP6++mq6ybVZZwNcELEs6v0eINDM7t07PV7tsgV2djMyqXyFTQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:20:55 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:20:56 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:21:01 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-17 12:21:15 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7o/NUL1AZBNRAfU+cQdymT0YB2PQ/KdmFIK4qqppQwvNmvPtQnJyPsDJc1WPecriy45atK07z9eam2U0eplzCA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:21:15 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:21:15 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:21:16 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered user/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:22:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/feed" for 127.0.0.1 at 2020-06-17 12:24:11 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/feed"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:30:05 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:34:35 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:36:24 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-06-17 12:36:25 +0200
+Processing by MusicController#new as HTML
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:36:25 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered user/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-17 12:36:28 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:44:47 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-17 12:44:50 +0200
+Processing by OtherController#contact as HTML
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:44:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:14 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered user/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:31 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered user/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:31 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered user/registrations/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:32 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered user/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:32 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered user/registrations/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:51:33 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered user/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:52:24 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (2.0ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered user/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:53:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-17 12:53:39 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/registrations/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/assets/Logo.png" for 127.0.0.1 at 2020-06-17 12:53:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/Logo.png"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:53:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 95ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-17 12:53:45 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered user/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 94ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-17 12:53:49 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.4ms)
+Started GET "/user/assets/Logo.png" for 127.0.0.1 at 2020-06-17 12:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/Logo.png"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 99ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
