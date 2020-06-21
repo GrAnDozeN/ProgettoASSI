@@ -22,7 +22,3 @@
           %td= fav.music.year 
           %td= link_to "Details", music_path(fav.music)
   
-  -#Bottone per creazione nuovo brano
-  %button.btn.btn-secondary 
-    %span.fa.fa-plus
-    #{link_to "Add new track", new_music_path, {:style=>'color: white; text-decoration: none; font-weight: bold'}}

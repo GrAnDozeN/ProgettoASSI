@@ -309,3 +309,10 @@ Scenario: Can use Spotify preview as admin
   Then I should be on show a track
   And I should not see the preview
 
+Scenario: I can visit the About page
+  Given I am logged
+  Then I should be on the Musicman home page
+  When I follow "About us"
+  Then I should be on the about page
+
+

@@ -1,12 +1,12 @@
 %div.container-fluid.mainContainer.displayContainer
 
-    %h2{:style=>'margin-bottom: 50px;'} Modify #{@review.id}
+    %h2{:style=>'margin-bottom: 50px;'} Modify comment
 
     %div.container.contForm{:style=>'max-width: 600px'}
         = form_tag music_review_path(@review), :method => :put do
 
             %div.form-group
-                = label :review, :musicman, 'musicman', style:"font-weight: bold"
+                = label :review, :musicman, 'vote', style:"font-weight: bold"
                 = select :review, :musicman, [1,2,3,4,5], class:'form-control rounded border-dark insertText', required:'true'
 
 

@@ -1,6 +1,10 @@
 class ReviewsController < ApplicationController
 
+
 	def new
+		if !user_signed_in?
+			redirect_to new_user_session_path()
+		end
 	end
 
 	def show
@@ -35,6 +39,9 @@ class ReviewsController < ApplicationController
     end
 
 	def edit
+		if !user_signed_in?
+			redirect_to new_user_session_path()
+		end
 		id = params[:music_id]
 		@review = Review.find(id)
 	end
