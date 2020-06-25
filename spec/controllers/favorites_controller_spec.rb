@@ -21,18 +21,18 @@ RSpec.describe Music::FavoritesController, type: :controller do
                 expect(assigns(:favorites)).not_to be_nil
             end
 
-            it "destroy" do
+            it "Destroy" do
                 expect(Favorite.count).to eql(1)
                 delete :destroy, :params => {:id_music => 1}
                 expect(Favorite.count).to eql(0)
             end
 
-            it "update exist track" do
+            it "Update an exist favorite" do
                 put :update, :params => {:id_music => 1}
                 expect(assigns(:favorite)).to be_nil
             end
 
-            it "update not exist track" do
+            it "Add a track in favorite" do
                 delete :destroy, :params => {:id_music => 1}
                 put :update, :params => {:id_music => 1}
                 expect(assigns(:favorite)).not_to be_nil

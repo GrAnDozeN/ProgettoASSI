@@ -51895,3 +51895,737 @@ Processing by OtherController#about as HTML
 Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:29 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/2" for 127.0.0.1 at 2020-06-25 20:15:32 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/2" for 127.0.0.1 at 2020-06-25 20:15:33 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PNHFDWMXbyCrCleO50Vaurq+u9f/954VBTnnM2cvCjspjwhnCN03smoeNebQWWLSwLyE9FRuv9/3AMIkMF48Eg==", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 10ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:33 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/4" for 127.0.0.1 at 2020-06-25 20:15:34 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/4" for 127.0.0.1 at 2020-06-25 20:15:35 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QfjaiYu2ATv2HU3ZoCiYWrxSIIUueUlTNLq8CDgQ7qFUphfj4HxZqTcJL7GXNKAyxlAfpoXgaJnGg5kfb2HYiA==", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 11ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:35 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/8" for 127.0.0.1 at 2020-06-25 20:15:39 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/user/8" for 127.0.0.1 at 2020-06-25 20:15:40 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n7T7F/Jdyf28CZ+OcGM8ieS8gVdXrP21LuVpdfJy8cOK6jZ9mZeRb30d/eZHfwThnr6+dPw13H/c3ExipQPH6g==", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 9ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:40 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/9" for 127.0.0.1 at 2020-06-25 20:15:41 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/9" for 127.0.0.1 at 2020-06-25 20:15:42 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Cqn4KkrXTCulLKmZgh8JqLAzequCB1RtbcTBYjaLXj4f9zVAIR0UuWQ4y/G1AzHAyjFFiCmedaef/eR1YfpoFw==", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:42 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/10" for 127.0.0.1 at 2020-06-25 20:15:43 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/10" for 127.0.0.1 at 2020-06-25 20:15:44 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V7oW9cRMEeyQHUZgDr0SGTlsu8IJIjwNjpGR3B7RWtBC5Nufr4ZJflEJJAg5oSpxQ26E4aK7Hcd8qLTLSaBs+Q==", "id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:44 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/11" for 127.0.0.1 at 2020-06-25 20:15:45 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/11" for 127.0.0.1 at 2020-06-25 20:15:45 +0200
+Processing by UserController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KNyK2dHBhW6XhXieRTzAXk19CaOPjHVYLxKfiHxGa1o9gkezugvd/FaRGvZyIPg2N382gCQVVJLdK7qfKzddcw==", "id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/user_controller.rb:18
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:18
+Redirected to http://localhost:3000/user
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 20:15:45 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 23:28:33 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (19.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 292ms (Views: 285.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 23:29:12 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 138ms (Views: 131.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2020-06-25 23:29:56 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 93ms (Views: 86.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 23:30:38 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-25 23:32:46 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2020-06-25 23:34:35 +0200
+Processing by OtherController#sendMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47QUSaocIfLueJhtsfTjbqo3wl7ykHdmbeM4wVqVoj326tkjwdZ5YC9s+gWG6NsG0DX9fVkJVqyf2h3WDeSUFA==", "send"=>{"msgType"=>"Wrong data for a track", "msg"=>"prova"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:21
+  Rendering to_developers_mailer/toDev.html.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.html.haml within layouts/mailer (3.6ms)
+  Rendering to_developers_mailer/toDev.text.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.text.haml within layouts/mailer (2.2ms)
+ToDevelopersMailer#toDev: processed outbound mail in 62.3ms
+Sent mail to testing@developers.mail (164.5ms)
+Date: Thu, 25 Jun 2020 23:34:35 +0200
+From: admin@admin.admin
+To: testing@developers.mail
+Message-ID: <5ef5186b1d6e1_b402ad966bfc72c1894b@grandozen-VBDesk.mail>
+Subject: Musicman mail -> Wrong data for a track (from: admin@admin.admin)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ef5186b1b65a_b402ad966bfc72c188b2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ef5186b1b65a_b402ad966bfc72c188b2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Topic: <%= @type %>
+============================================
+From <%= @user.email %>
+============================================
+Message: <%= @msg %>
+
+
+----==_mimepart_5ef5186b1b65a_b402ad966bfc72c188b2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>
+Topic: Wrong data for a track
+</h3>
+<h5>
+From admin@admin.admin
+</h5>
+<p>
+Message: prova
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5ef5186b1b65a_b402ad966bfc72c188b2--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 244ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 23:34:35 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (15.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 23:47:36 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 23:48:12 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2020-06-25 23:48:48 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 23:49:32 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.5ms)
+Started GET "/user/assets/Logo.png" for 127.0.0.1 at 2020-06-25 23:49:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/Logo.png"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-25 23:50:38 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2020-06-25 23:51:43 +0200
+Processing by OtherController#sendMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E1c1A4Ax99q4jnHiuPXRrn7TJ2RodJ86fkBV7a85pWsGCfhp6/uvSHmaE4qP6enGBNEYR8PtvvCMeXD6+EiTQg==", "send"=>{"msgType"=>"Inappropriate comment", "msg"=>"messaggio di prova"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:21
+  Rendering to_developers_mailer/toDev.html.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.html.haml within layouts/mailer (1.3ms)
+  Rendering to_developers_mailer/toDev.text.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.text.haml within layouts/mailer (1.2ms)
+ToDevelopersMailer#toDev: processed outbound mail in 32.0ms
+Sent mail to testing@developers.mail (53.8ms)
+Date: Thu, 25 Jun 2020 23:51:43 +0200
+From: admin@admin.admin
+To: testing@developers.mail
+Message-ID: <5ef51c6fb83f3_b402ad966bfc344191d0@grandozen-VBDesk.mail>
+Subject: Musicman mail -> Inappropriate comment (from: admin@admin.admin)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ef51c6fb7b88_b402ad966bfc34419040";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ef51c6fb7b88_b402ad966bfc34419040
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Topic: <%= @type %>
+============================================
+From <%= @user.email %>
+============================================
+Message: <%= @msg %>
+
+
+----==_mimepart_5ef51c6fb7b88_b402ad966bfc34419040
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>
+Topic: Inappropriate comment
+</h3>
+<h5>
+From admin@admin.admin
+</h5>
+<p>
+Message: messaggio di prova
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5ef51c6fb7b88_b402ad966bfc34419040--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 88ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 23:51:43 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-26 00:01:18 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-26 00:03:16 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-06-26 00:03:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/6" for 127.0.0.1 at 2020-06-26 00:03:47 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-26 00:04:23 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+Started GET "/user/assets/Logo.png" for 127.0.0.1 at 2020-06-26 00:04:23 +0200
+  Rendered other/about.html.haml within layouts/application (6.3ms)
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/Logo.png"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 146ms (Views: 145.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-26 00:05:23 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2020-06-26 00:06:40 +0200
+Processing by OtherController#sendMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ET5nL1m+vkbJ1uzmBL/rk7EoAJP61iNBzpaFt8bDRA4EYKpFMnTm1AjCjo4zo9P7yyo/sFFPAos8r6CgkbJyJw==", "send"=>{"msgType"=>"Wrong data for a track", "msg"=>"inserendo un messagio prova"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:21
+  Rendering to_developers_mailer/toDev.html.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.html.haml within layouts/mailer (1.7ms)
+  Rendering to_developers_mailer/toDev.text.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.text.haml within layouts/mailer (1.1ms)
+ToDevelopersMailer#toDev: processed outbound mail in 11.1ms
+Sent mail to testing@developers.mail (8.6ms)
+Date: Fri, 26 Jun 2020 00:06:40 +0200
+From: admin@admin.admin
+To: testing@developers.mail
+Message-ID: <5ef51ff0c613_b402ad966bfc588193f8@grandozen-VBDesk.mail>
+Subject: Musicman mail -> Wrong data for a track (from: admin@admin.admin)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ef51ff0be6b_b402ad966bfc58819212";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ef51ff0be6b_b402ad966bfc58819212
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Topic: <%= @type %>
+============================================
+From <%= @user.email %>
+============================================
+Message: <%= @msg %>
+
+
+----==_mimepart_5ef51ff0be6b_b402ad966bfc58819212
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>
+Topic: Wrong data for a track
+</h3>
+<h5>
+From admin@admin.admin
+</h5>
+<p>
+Message: inserendo un messagio prova
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5ef51ff0be6b_b402ad966bfc58819212--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 22ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-26 00:06:40 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.1ms)
+
+
