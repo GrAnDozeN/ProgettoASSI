@@ -3,11 +3,14 @@
 %table.table.container-fluid#users{style:"text-align:center"}
     %tbody
         - @users.each do |user|
-            %tr
-                //%td= user.email
-                %td
-                    #{link_to user.email.slice(0..(user.email.index("@")-1)), user_path(user), :style=>'text-decoration: none;'}
-                    -if (user.premium?)
-                        %span{style: "color:#0B0080"} (premium)
-                    -elsif (user.admin?)
-                        %span{style: "color:#0B0080"} (admin)
+            -if !(user == current_user)
+                %tr
+                    //%td= user.email
+                    %td
+                        #{link_to user.email.slice(0..(user.email.index("@")-1)), user_path(user), :style=>'text-decoration: none;'}
+                        -if (!user.premium? && !user.admin?)
+                            %span{style: "color:#0B0080"} (user)
+                        -elsif (user.premium?)
+                            %span{style: "color:#0B0080"} (premium)
+                        -elsif (user.admin?)
+                            %span{style: "color:#0B0080"} (admin)

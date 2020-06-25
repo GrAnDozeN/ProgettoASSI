@@ -22,7 +22,10 @@ class MusicController < ApplicationController
 			@musics = Music.all
 		end
 
-		@musics = @musics.order(params[:sort])
+		if (params[:sort])
+			@musics = @musics.order(params[:sort])
+		end
+
 	end
 
 

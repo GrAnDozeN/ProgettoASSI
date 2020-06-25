@@ -24,12 +24,14 @@ RSpec.describe MusicController, type: :controller do
     
     describe "Tracks variable" do
         before(:each) do
+              
             Music.new(title: 'b', author: "same", album: 'b', genre: 'b', year: '1990').save
             Music.new(title: 'a', author: "same", album: 'a', genre: 'Rock', year: '1990').save
             Music.new(title: 'c', author: "c", album: 'c', genre: 'c', year: '1990').save
             @track1 = Music.find(1)
             @track2 = Music.find(2)
             @track3 = Music.find(3)
+
         end
 
         it "All tracks" do

@@ -28,7 +28,7 @@ RSpec.describe Music, type: :model do
     end
   end
 
-  context 'Columns not null tests' do
+  context 'Columns not null in tracks' do
     it 'can not create the track with only the title' do
       expect{Music.new(title: 'Titolo').save}.to raise_error(ActiveRecord::NotNullViolation)
     end

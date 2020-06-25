@@ -9,7 +9,6 @@ RSpec.describe "music/index", :type => :view do
         end
 
         it "renders the index view" do
-            assign(:musics, [@track1])
             render
             expect(rendered).to render_template(:index)
         end
