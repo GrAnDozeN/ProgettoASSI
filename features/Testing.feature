@@ -13,3 +13,4 @@ Scenario: Can use Spotify preview as admin
   And I press "Save Changes"
   Then I should be on show a track
   And I should not see the preview
+

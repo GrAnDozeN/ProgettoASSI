@@ -52,10 +52,27 @@ Given "I am logged" do
   fill_in("user_password_confirmation", :with=>"password")
   click_button("Sign up")
   user = User.find(1)
-  user.confirmed_at = Time.zone.now
+  user.roles_mask = 0
+  user.confirm()
   user.save
   visit path_to("the Login Page")
   fill_in("user_email", :with=>"guest@gmail.com")
+  fill_in("user_password", :with=>"password")
+  click_button("Log in")
+end
+
+Given "I am logged as premium" do
+  visit path_to("the Register Page")
+  fill_in("user_email", :with=>"premium@gmail.com")
+  fill_in("user_password", :with=>"password")
+  fill_in("user_password_confirmation", :with=>"password")
+  click_button("Sign up")
+  user = User.find(1)
+  user.roles_mask = 1
+  user.confirm()
+  user.save
+  visit path_to("the Login Page")
+  fill_in("user_email", :with=>"premium@gmail.com")
   fill_in("user_password", :with=>"password")
   click_button("Log in")
 end
@@ -68,12 +85,18 @@ Given "I am logged as admin" do
   click_button("Sign up")
   user = User.find(1)
   user.roles_mask = 2
-  user.confirmed_at = Time.zone.now
+  user.confirm()
   user.save
   visit path_to("the Login Page")
   fill_in("user_email", :with=>"admin@gmail.com")
   fill_in("user_password", :with=>"password")
   click_button("Log in")
+end
+
+When "I verify my account" do
+  user = User.find(1)
+  user.confirm()
+  user.save
 end
 
 Then /^I should (not )?see the preview$/ do |negate|
@@ -87,6 +110,10 @@ end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
+end
+
+When /^(?:|I )press the first "([^"]*)"$/ do |button|
+  click_button(button, match: :first)
 end
 
 When "I accept the alert" do

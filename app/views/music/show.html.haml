@@ -45,7 +45,7 @@
 		%button.btn.btn-light.border 
 			%span.fa.fa-star
 			#{link_to 'Remove from favorite', favorite_path(:id_music => @music.id), :method => :delete, :style=>'text-decoration: none;'}
-	- else
+	- else 
 		%button.btn.btn-light.border 
 			%span.fa.fa-star-o
 			#{link_to 'Add to favorite', favorite_path(:id_music => @music.id), :method => :put, :style=>'text-decoration: none;'}

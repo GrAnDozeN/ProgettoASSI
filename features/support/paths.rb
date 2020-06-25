@@ -43,10 +43,13 @@ module NavigationHelpers
       '/music/1/reviews/1/edit'
 
     when /^the forgot your password page/
-      '/users/password/new'
+      '/user/password/new'
 
     when /^the about page/
       '/about'
+
+    when /^the Contact page/
+      '/contact'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
