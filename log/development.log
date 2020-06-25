@@ -50175,3 +50175,1723 @@ Processing by OtherController#about as HTML
 Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-06-25 18:58:05 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/music" for 127.0.0.1 at 2020-06-25 18:58:05 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 302ms (Views: 296.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 18:58:39 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (1.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (20.5ms)
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 18:58:45 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 18:58:45 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 18:58:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered user/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-25 18:58:55 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/registrations/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-06-25 18:59:48 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3+dWUaCfgPusjynaGZ2UU4+PduzYDXyZ+9RnxOfZtSO2j7Kc8u0+jFUhYuxq/7gQagkVCj6GnjhHS0Z2qgN/9A==", "user"=>{"email"=>"nuovoutente11@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nuovoutente11@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "nuovoutente11@gmail.com"], ["encrypted_password", "$2a$11$3XVdJ9lv9ZtAtsDW.LE.nuV/W6hHsO/Fl/ekxZUwWAUH57NxyhwwS"], ["created_at", "2020-06-25 16:59:48.517677"], ["updated_at", "2020-06-25 16:59:48.517677"], ["confirmation_token", "oEmX7sixSjzzZMKnD-Zj"], ["confirmation_sent_at", "2020-06-25 16:59:48.517779"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/confirmation_instructions.html.erb
+  Rendered user/mailer/confirmation_instructions.html.erb (0.7ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 20.0ms
+Sent mail to nuovoutente11@gmail.com (174.2ms)
+Date: Thu, 25 Jun 2020 18:59:48 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: nuovoutente11@gmail.com
+Message-ID: <5ef4d8048a6b3_1c9f2b13906b005c79018@grandozen-VBDesk.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome nuovoutente11@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/user/confirmation?confirmation_token=oEmX7sixSjzzZMKnD-Zj">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 334ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 18:59:48 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 18:59:48 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/confirmation?confirmation_token=oEmX7sixSjzzZMKnD-Zj" for 127.0.0.1 at 2020-06-25 19:00:13 +0200
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"oEmX7sixSjzzZMKnD-Zj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "oEmX7sixSjzzZMKnD-Zj"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2020-06-25 17:00:13.564453"], ["updated_at", "2020-06-25 17:00:13.564888"], ["id", 10]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:24 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bcO3aYRgLenzVgmN+nHMLDA4OgCRtjPU0B4fFzor7+Y32wEnlHZ5T2eAv3KT0RKjUrH0VkGAcyIdoOGCxECbaA==", "user"=>{"email"=>"nuovoutente11@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nuovoutente11@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 106ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:00:24 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:00:25 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:00:30 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fxLyxvuQXE4SVxkHCv3NDwznI+An/ijYnW085svRTtmxwU9YVDorTki6wXGPaQ7ImvMBagSgFEmZJR3en3muSw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:00:30 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:00:30 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/password/new" for 127.0.0.1 at 2020-06-25 19:00:36 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendering user/passwords/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered user/passwords/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/password" for 127.0.0.1 at 2020-06-25 19:00:41 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dZI6TtjyBeTq/CEQWsbgaW9DkZrlRLjv1vOuLAPpvmHVKsVUZYcJL8Dz7d7o+2DXy7Yr9qhFl0myHWauHBWt6Q==", "user"=>{"email"=>"nuovoutente11@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nuovoutente11@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "c992c9d229145496787c9dfa38b0ba9082aaac5c95324e3e61ab68a5134a0b62"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "c992c9d229145496787c9dfa38b0ba9082aaac5c95324e3e61ab68a5134a0b62"], ["reset_password_sent_at", "2020-06-25 17:00:41.598149"], ["updated_at", "2020-06-25 17:00:41.598708"], ["id", 10]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/reset_password_instructions.html.erb
+  Rendered user/mailer/reset_password_instructions.html.erb (0.6ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 15.4ms
+Sent mail to nuovoutente11@gmail.com (3.4ms)
+Date: Thu, 25 Jun 2020 19:00:41 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: nuovoutente11@gmail.com
+Message-ID: <5ef4d8399831f_1c9f2b13906b005c791a0@grandozen-VBDesk.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello nuovoutente11@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/user/password/edit?reset_password_token=LZgy5VSV-GhXnkN8wvQA">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 134ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:41 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:00:45 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e/g3UfV50QN/IPX2GQhXrzeAmX86lUAReNGzGcLXGOFNi+rhCJuXrQmBC7sTt5MHHqj/saU4uJjFYWHqHIS/Wg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:00:45 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:00:45 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2020-06-25 19:00:47 +0200
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering user/passwords/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/passwords/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:00:56 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lKmzRHyIZTt2PM4K70RTExqsZ9yWCgvOdsXZ/XqMMWqTsK1zBgzU42q6msSiJ4dZZMckheW/LX34u6yjOHoJkA==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:00:57 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:00:57 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user/password" for 127.0.0.1 at 2020-06-25 19:00:58 +0200
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6rCckelyxVtTwBuEroA5c9koVTxqwqLavRISe6Vegw8M2NpggjtwAuawmlOYMXbiGL/K6xlAsq06kV/RWV1O6w==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "c992c9d229145496787c9dfa38b0ba9082aaac5c95324e3e61ab68a5134a0b62"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_sent_at" = ?, "encrypted_password" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_sent_at", nil], ["encrypted_password", "$2a$11$ul58Dwcqsc36MNEpF4Xmnu9xRxtuoCp6AnMejnoRCyjTVCHN2uVRK"], ["reset_password_token", nil], ["updated_at", "2020-06-25 17:00:58.594911"], ["id", 10]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:00:58 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:00:59 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:01:07 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U0ZjERpqS55Bg2JSR1dZIwcv136OJh/13r/AwHO/T9C1LiXgcSP+x/Tz44Vx5hayxrhIqf2kD4JZPI1qj7yCNA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:01:07 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:01:07 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:01:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 54ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-25 19:01:19 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-25 19:01:19 +0200
+Started GET "/user/auth/facebook/callback?code=AQBPJ22-sgjk8hqfl9e6jU0k2f1esxlSAv1sjd1vo-gajXts_MuKp5hq9aAaL7KUXn2nuC853BEJ1TxKY1wD3IixqWShluzzw39a6-lKtLnK1Kax94Uk4fL9vk5PkVeMeWWny7UVHoIeUkUY-H1H44ub0-IsC-jA8dNTf0mbenOK7k0uiFw0CW19RRPUwU9RupS9c9vEPmf5hlEjC2bnpNR23IlFufA5Xx2mqu2015qdTaRc3dauNXcV_TAIX-t027ZEA16RXRm59hIUa8pEzyRSx1az37SFlrj0_v8ZGaUvcYBV9YrXYtLveEpKu1u2aQG1J_WfvIcmHfUKZrxhkxaM&state=668e244619a3b38c0a9ab375cd975f40d56d9793b1666edf" for 127.0.0.1 at 2020-06-25 19:01:34 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBPJ22-sgjk8hqfl9e6jU0k2f1esxlSAv1sjd1vo-gajXts_MuKp5hq9aAaL7KUXn2nuC853BEJ1TxKY1wD3IixqWShluzzw39a6-lKtLnK1Kax94Uk4fL9vk5PkVeMeWWny7UVHoIeUkUY-H1H44ub0-IsC-jA8dNTf0mbenOK7k0uiFw0CW19RRPUwU9RupS9c9vEPmf5hlEjC2bnpNR23IlFufA5Xx2mqu2015qdTaRc3dauNXcV_TAIX-t027ZEA16RXRm59hIUa8pEzyRSx1az37SFlrj0_v8ZGaUvcYBV9YrXYtLveEpKu1u2aQG1J_WfvIcmHfUKZrxhkxaM", "state"=>"668e244619a3b38c0a9ab375cd975f40d56d9793b1666edf"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:01:34 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:01:34 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2020-06-25 19:01:41 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/registrations/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered user/registrations/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:01:56 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2020-06-25 19:03:02 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/registrations/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered user/registrations/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:03:08 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music?sort=Title" for 127.0.0.1 at 2020-06-25 19:05:20 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"Title"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY Title[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music?sort=author" for 127.0.0.1 at 2020-06-25 19:05:21 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"author"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY author[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music?sort=genre" for 127.0.0.1 at 2020-06-25 19:05:23 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"genre"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY genre[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music?sort=year" for 127.0.0.1 at 2020-06-25 19:05:24 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"year"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.6ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY year[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music?sort=album" for 127.0.0.1 at 2020-06-25 19:05:25 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"album"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY album[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:05:28 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (41.2ms)
+Completed 200 OK in 101ms (Views: 86.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:05:32 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/7/reviews/new" for 127.0.0.1 at 2020-06-25 19:06:55 +0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"music_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5
+  Rendering reviews/new.html.haml within layouts/application
+  Rendered reviews/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music/7/reviews" for 127.0.0.1 at 2020-06-25 19:07:00 +0200
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"keV0LMjOz9BVHmGk2hRmbUzU+hr3W4/9iZbna8d4bhrZKPKCFj3O7u/EQMRtBkvDtjrEuOfJHx6joH+7eTWWqg==", "review"=>{"musicman"=>"5", "comments"=>"Amazing!"}, "commit"=>"Add a review", "music_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("musicman", "comments", "user_id", "music_id") VALUES (?, ?, ?, ?)[0m  [["musicman", 5], ["comments", "Amazing!"], ["user_id", 1], ["music_id", 7]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:22
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 18ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:07:00 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/music/7/reviews/7" for 127.0.0.1 at 2020-06-25 19:07:05 +0200
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WIYHTuSuxbmHNU23V1jYus2iz7XmU/50xlB5DB1z1wPvgUjebWzIYF3VFOyAYybf+Fo2LFinxfgz+UhwnI2kbQ==", "music_id"=>"7", "id"=>"7"}
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:30
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/reviews_controller.rb:30
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:30
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 10ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:07:05 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music/7/edit" for 127.0.0.1 at 2020-06-25 19:07:07 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:147
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:152
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/music/7" for 127.0.0.1 at 2020-06-25 19:07:11 +0200
+Processing by MusicController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ryh/TO06MK+8u+OvGcFosj9LB1r9XeWAT0dig5fPkAmp5XTN0bgwF+4MNuZIYIcuxCEV/moPEX6SOvaG3xtDg==", "music"=>{"title"=>"Tarova", "author"=>"Snarky Puppy", "album"=>"Culcha Vulcha", "genre"=>"Jazz", "year"=>"2016"}, "commit"=>"Save Changes", "id"=>"7"}
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:113
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:114
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:115
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:115
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:139
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:139
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:140
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:140
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 356ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:07:11 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/favorite?id_music=7" for 127.0.0.1 at 2020-06-25 19:07:17 +0200
+Processing by Music::FavoritesController#update as HTML
+  Parameters: {"authenticity_token"=>"WdNDIbtPY4+ofap0/txl60SUOr1CUufvmPFssP40GMTu1AyxMo1uVnKd8y8p55uOcWzDJPym3GNtWF3Mf8prqg==", "id_music"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:11
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:13
+  [1m[36mFavorite Create (0.6ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "music_id") VALUES (?, ?)[0m  [["user_id", 1], ["music_id", 7]]
+  ↳ app/controllers/music/favorites_controller.rb:13
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:13
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 18ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:07:17 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:07:23 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music?utf8=%E2%9C%93&search=Routine&type=Title" for 127.0.0.1 at 2020-06-25 19:08:08 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Routine", "type"=>"Title"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."title" = ?[0m  [["title", "Routine"]]
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-06-25 19:08:11 +0200
+Processing by MusicController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:96
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-06-25 19:08:21 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zJ6HY6/T9Fwg+Lt0eGE9brkZP82/Qytgk6pHTEK2G5cMcQ2kNMdpc4T7SmKHpqxU+BIZ6puD523Q9CQsw1sSZA==", "music"=>{"title"=>"Prova", "author"=>"Prova1", "album"=>"Prova2", "genre"=>"Rock", "year"=>"2020"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" = ? AND "musics"."author" = ? AND "musics"."genre" = ? AND "musics"."year" = ? LIMIT ?[0m  [["title", "Prova"], ["author", "Prova1"], ["genre", "Rock"], ["year", "2020"], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:70
+  [1m[36mMusic Create (0.2ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Prova"], ["author", "Prova1"], ["album", "Prova2"], ["genre", "Rock"], ["year", "2020"], ["created_at", "2020-06-25 17:08:21.694291"], ["updated_at", "2020-06-25 17:08:21.694291"], ["user_id", 1]]
+  ↳ app/controllers/music_controller.rb:70
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:71
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:71
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:72
+Redirected to http://localhost:3000/music/9
+Completed 302 Found in 324ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/music/9" for 127.0.0.1 at 2020-06-25 19:08:21 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:34
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 9], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 9]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favorite" for 127.0.0.1 at 2020-06-25 19:08:35 +0200
+Processing by Music::FavoritesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering music/favorites/show.html.haml within layouts/application
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/music/favorites/show.html.haml:15
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/music/favorites/show.html.haml:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/favorites/show.html.haml:17
+  Rendered music/favorites/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 19:09:10 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (9.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 83ms (Views: 81.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-25 19:09:49 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2020-06-25 19:10:46 +0200
+Processing by OtherController#sendMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dicVMdIENS2ZUHGfUkMz76Ne4uIJt57hpLVaPiyQgNSIRBPpOhYHkZDuutqPrVKCp4Sn4aLWpnBQKm3VLMoW8g==", "send"=>{"msgType"=>"Wrong data for a track", "msg"=>"proiva"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:21
+  Rendering to_developers_mailer/toDev.html.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.html.haml within layouts/mailer (1.5ms)
+  Rendering to_developers_mailer/toDev.text.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.text.haml within layouts/mailer (1.1ms)
+ToDevelopersMailer#toDev: processed outbound mail in 10.2ms
+Sent mail to testing@developers.mail (21.3ms)
+Date: Thu, 25 Jun 2020 19:10:46 +0200
+From: admin@admin.admin
+To: testing@developers.mail
+Message-ID: <5ef4da962aaab_1c9f2b13906c1f3c793ac@grandozen-VBDesk.mail>
+Subject: Musicman mail -> Wrong data for a track (from: admin@admin.admin)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ef4da9629b72_1c9f2b13906c1f3c79291";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ef4da9629b72_1c9f2b13906c1f3c79291
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Topic: <%= @type %>
+============================================
+From <%= @user.email %>
+============================================
+Message: <%= @msg %>
+
+
+----==_mimepart_5ef4da9629b72_1c9f2b13906c1f3c79291
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>
+Topic: Wrong data for a track
+</h3>
+<h5>
+From admin@admin.admin
+</h5>
+<p>
+Message: proiva
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5ef4da9629b72_1c9f2b13906c1f3c79291--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 50ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 19:10:46 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:17:48 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dicVMdIENS2ZUHGfUkMz76Ne4uIJt57hpLVaPiyQgNSIRBPpOhYHkZDuutqPrVKCp4Sn4aLWpnBQKm3VLMoW8g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:17:49 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:17:49 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.5ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:30:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:30:47 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:30:47 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:30:52 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BHq5dNE0t5b+IuKAYiF2hgVdNZ9Wa7X8uN0qE8v718J9wi7OXCmpI+rYJV14UNUSj9+up48wIOZgig5Xl7OFTg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:30:52 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:30:52 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2020-06-25 19:30:54 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering user/registrations/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:31:00 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (8.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-06-25 19:31:13 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fYFnjM1csNFN7Z25KmzurX+nCl0p6Jsmd60FcIL6VdB7OZL/oITomY23VpFQ4iea3RqoAt837GFI4366duiZMw==", "user"=>{"email"=>"nuovoutente12@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nuovoutente12@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "nuovoutente12@gmail.com"], ["encrypted_password", "$2a$11$bC7FlovSVk5SyWyZF82DLOlHOak8WFWtbUygmi0QZdmb8RwtcB4PO"], ["created_at", "2020-06-25 17:31:13.992400"], ["updated_at", "2020-06-25 17:31:13.992400"], ["confirmation_token", "E85nm89yNHyHFUwqd51N"], ["confirmation_sent_at", "2020-06-25 17:31:13.992491"]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/confirmation_instructions.html.erb
+  Rendered user/mailer/confirmation_instructions.html.erb (0.7ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 5.1ms
+Sent mail to nuovoutente12@gmail.com (8.1ms)
+Date: Thu, 25 Jun 2020 19:31:14 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: nuovoutente12@gmail.com
+Message-ID: <5ef4df6212d7_1c9f2b13906c1fc8794ba@grandozen-VBDesk.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome nuovoutente12@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/user/confirmation?confirmation_token=E85nm89yNHyHFUwqd51N">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:31:14 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:31:14 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/confirmation?confirmation_token=E85nm89yNHyHFUwqd51N" for 127.0.0.1 at 2020-06-25 19:31:40 +0200
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"E85nm89yNHyHFUwqd51N"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "E85nm89yNHyHFUwqd51N"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2020-06-25 17:31:40.026071"], ["updated_at", "2020-06-25 17:31:40.026625"], ["id", 11]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 12ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:31:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered user/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/password/new" for 127.0.0.1 at 2020-06-25 19:31:48 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendering user/passwords/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered user/passwords/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/password" for 127.0.0.1 at 2020-06-25 19:31:54 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cwaeIq0uZpNZ06IOWrApODiFm5VAKUdUiPUF1I3PfpfNOrETVT8zHToTJKhud7k4ALOumOeAPL+O/EArilf7zw==", "user"=>{"email"=>"nuovoutente12@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nuovoutente12@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "666b8968d5d41b92b65a5f3a2af4b1cc99f214b04bd09b9cecac591955a0b59b"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "666b8968d5d41b92b65a5f3a2af4b1cc99f214b04bd09b9cecac591955a0b59b"], ["reset_password_sent_at", "2020-06-25 17:31:54.997463"], ["updated_at", "2020-06-25 17:31:54.998040"], ["id", 11]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/mailer/reset_password_instructions.html.erb
+  Rendered user/mailer/reset_password_instructions.html.erb (0.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 7.7ms
+Sent mail to nuovoutente12@gmail.com (3.4ms)
+Date: Thu, 25 Jun 2020 19:31:55 +0200
+From: railsapp2020@gmail.com
+Reply-To: railsapp2020@gmail.com
+To: nuovoutente12@gmail.com
+Message-ID: <5ef4df8b2f99_1c9f2b13906c1f3c795ca@grandozen-VBDesk.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello nuovoutente12@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/user/password/edit?reset_password_token=TzV7P9PXqqjPg9SvYhwF">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 22ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:31:55 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered user/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2020-06-25 19:32:05 +0200
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering user/passwords/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered user/passwords/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/user/password" for 127.0.0.1 at 2020-06-25 19:32:13 +0200
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCOrebhBvnM5uVnGIiH/0LpEY2wuClHmxDXI7ApwtCBj46M/f/wj9jEKsSp37Cr0w52lroZmnHEeqLnqH7hiSw==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "666b8968d5d41b92b65a5f3a2af4b1cc99f214b04bd09b9cecac591955a0b59b"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/passwords/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered user/passwords/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 178ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user/password" for 127.0.0.1 at 2020-06-25 19:32:20 +0200
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6y3+853M/CKDu87TsZrHqTRewNrj/XIKT3Np9bfushmk7fa1WnFhp4sIJj/kVxKNTYcGGEuRv52V7hjzoiZkcg==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "666b8968d5d41b92b65a5f3a2af4b1cc99f214b04bd09b9cecac591955a0b59b"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_sent_at" = ?, "encrypted_password" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_sent_at", nil], ["encrypted_password", "$2a$11$1r/beNSP/H3J1ovuownpvOFTJeVlyk3RTLqkUD0Spg9bK.Gj2/peG"], ["reset_password_token", nil], ["updated_at", "2020-06-25 17:32:20.372842"], ["id", 11]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:32:20 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:32:20 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2020-06-25 19:32:26 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering user/registrations/edit.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered user/registrations/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2020-06-25 19:33:04 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9NtM/GEDEs6Ga6uw8BVBL6dRHZaInU6oRk0MpxfedDm7G0S6pr6PS47YQ1yl2JQL3ojbVCDxgz+c0H2hAhaiUg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:33:04 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:33:04 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:33:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered user/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-25 19:33:18 +0200
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2020-06-25 19:33:18 +0200
+Started GET "/user/auth/facebook/callback?code=AQAUB6hcU9V-nQRFMu12JRuwcIJLW12e3JjH2v-kXzC1q3dWfZXHX16RjImBgptId38Oh0k19_LRxzmPLQ6j2flQYzrvqZxwH49mFYc5wvkj-cUdrIgYEPCe2syFLhuKlQPr65OPq0SaT4mffNsCCvZT2Br6KMSULbL-onMwJWKVzs1_qE7Q377VXhDGVyHJEhDFfXjD3bEnqXTGeDn6VaaiDmkV9LbnkAHnfuNj1nYAmOST-Ivhvu9kZdFgDtHxuJKo3zw5L6YOCooJBlMceCLu6ZSAg-_S2PiVVh8yqI573SAhiG8J8rpdg4KG3XXt5Z9AqpLjLZxQSVHk53mV_FJ8&state=3975022644996a112c11c485a9fdcb503222f962e4f5b1de" for 127.0.0.1 at 2020-06-25 19:33:19 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAUB6hcU9V-nQRFMu12JRuwcIJLW12e3JjH2v-kXzC1q3dWfZXHX16RjImBgptId38Oh0k19_LRxzmPLQ6j2flQYzrvqZxwH49mFYc5wvkj-cUdrIgYEPCe2syFLhuKlQPr65OPq0SaT4mffNsCCvZT2Br6KMSULbL-onMwJWKVzs1_qE7Q377VXhDGVyHJEhDFfXjD3bEnqXTGeDn6VaaiDmkV9LbnkAHnfuNj1nYAmOST-Ivhvu9kZdFgDtHxuJKo3zw5L6YOCooJBlMceCLu6ZSAg-_S2PiVVh8yqI573SAhiG8J8rpdg4KG3XXt5Z9AqpLjLZxQSVHk53mV_FJ8", "state"=>"3975022644996a112c11c485a9fdcb503222f962e4f5b1de"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "2957085504329190"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:33:19 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:33:19 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:33:52 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering user/sessions/new.html.erb within layouts/application
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/grandozen/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered user/sessions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-25 19:33:58 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7d7/Du+dUu8gFffkxyZQRD1s0+obpXZ0ZbDrvklX/fK7hJq0wi0Kg+PcsSqrguxsjWzdGgsC3lDxm7ML+Kwq3g==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-25 19:33:58 +0200
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:33:58 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 19:34:02 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music?sort=Title" for 127.0.0.1 at 2020-06-25 19:34:15 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"Title"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY Title[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (8.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music?sort=author" for 127.0.0.1 at 2020-06-25 19:34:16 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"author"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY author[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music?sort=year" for 127.0.0.1 at 2020-06-25 19:34:19 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"year"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY year[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music?sort=genre" for 127.0.0.1 at 2020-06-25 19:34:20 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"genre"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY genre[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music?sort=album" for 127.0.0.1 at 2020-06-25 19:34:21 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"sort"=>"album"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY album[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:34:26 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/music/7/reviews/new" for 127.0.0.1 at 2020-06-25 19:35:11 +0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"music_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5
+  Rendering reviews/new.html.haml within layouts/application
+  Rendered reviews/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music/7/reviews" for 127.0.0.1 at 2020-06-25 19:35:17 +0200
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MvNT2ns0roH2f1SsUS3cvwDZmUvhezcbbe/VQZ7CaB56PtV0pcevv0yldczmP/ER+jen6fHpp/hH2U2RII+Qrg==", "review"=>{"musicman"=>"5", "comments"=>"Not Bad!"}, "commit"=>"Add a review", "music_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[36mReview Create (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("musicman", "comments", "user_id", "music_id") VALUES (?, ?, ?, ?)[0m  [["musicman", 5], ["comments", "Not Bad!"], ["user_id", 1], ["music_id", 7]]
+  ↳ app/controllers/reviews_controller.rb:22
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:22
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 12ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:35:18 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music/7/edit" for 127.0.0.1 at 2020-06-25 19:35:25 +0200
+Processing by MusicController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:147
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:152
+  Rendering music/edit.html.haml within layouts/application
+  Rendered music/edit.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/music/7" for 127.0.0.1 at 2020-06-25 19:35:27 +0200
+Processing by MusicController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KDhHuShKHMqEIBRbJNdI7inWKLu2xgo4r1NKuV7i14jUI3OXLLgUyGVqyw4Bkc9QWjuA8SSbQetUJrzpS8GExg==", "music"=>{"title"=>"Tarova", "author"=>"Snarky Puppy", "album"=>"Culcha Vulcha", "genre"=>"Jazz", "year"=>"2016"}, "commit"=>"Save Changes", "id"=>"7"}
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:113
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:114
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:115
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:115
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:139
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:139
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:140
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:140
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 288ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:35:27 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 55ms (Views: 50.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/favorite?id_music=7" for 127.0.0.1 at 2020-06-25 19:35:41 +0200
+Processing by Music::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Hs45RAYPdPX4DF1SmDPzNbI2JEuJuIzX3TGtekZ2dRmpyXbUj815LCLsBAlPCA1Qh87d0jdMt1somJwGx4gGdw==", "id_music"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:19
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:21
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ?[0m  [["user_id", 1], ["music_id", 7]]
+  ↳ app/controllers/music/favorites_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:22
+  [1m[36mFavorite Destroy (0.2ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/music/favorites_controller.rb:22
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:22
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 13ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:35:41 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/favorite?id_music=7" for 127.0.0.1 at 2020-06-25 19:35:44 +0200
+Processing by Music::FavoritesController#update as HTML
+  Parameters: {"authenticity_token"=>"Px/JnZOg3v485EJ6SaoBrLtsA9IS3jTzjS02m6QkrY2IGIYNGmLTJ+YEGyGekf/JjpT6S6wqD394hAfnJdre4w==", "id_music"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:11
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music/favorites_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:13
+  [1m[36mFavorite Create (0.7ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "music_id") VALUES (?, ?)[0m  [["user_id", 1], ["music_id", 7]]
+  ↳ app/controllers/music/favorites_controller.rb:13
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music/favorites_controller.rb:13
+Redirected to http://localhost:3000/music/7
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/music/7" for 127.0.0.1 at 2020-06-25 19:35:44 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMusic Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:21
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 7]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:37:06 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music?utf8=%E2%9C%93&search=Ancestral&type=Title" for 127.0.0.1 at 2020-06-25 19:37:25 +0200
+Processing by MusicController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Ancestral", "type"=>"Title"}
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."title" = ?[0m  [["title", "Ancestral"]]
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music/new" for 127.0.0.1 at 2020-06-25 19:37:30 +0200
+Processing by MusicController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:96
+  Rendering music/new.html.haml within layouts/application
+  Rendered music/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/music" for 127.0.0.1 at 2020-06-25 19:37:39 +0200
+Processing by MusicController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K96dMLW+dsIa+pL8Dz5EtOtRNKisMf+tYbuWz0qD0W3rMRf3Lqrr7b75Y+rw+dWOqloSj4jxM6Ai5fWvy27Yng==", "music"=>{"title"=>"Prova", "author"=>"Prova1", "album"=>"Prova2", "genre"=>"Jazz", "year"=>"2025"}, "commit"=>"Save Changes"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."title" = ? AND "musics"."author" = ? AND "musics"."genre" = ? AND "musics"."year" = ? LIMIT ?[0m  [["title", "Prova"], ["author", "Prova1"], ["genre", "Jazz"], ["year", "2025"], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:70
+  [1m[36mMusic Create (0.3ms)[0m  [1m[32mINSERT INTO "musics" ("title", "author", "album", "genre", "year", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Prova"], ["author", "Prova1"], ["album", "Prova2"], ["genre", "Jazz"], ["year", "2025"], ["created_at", "2020-06-25 17:37:39.605636"], ["updated_at", "2020-06-25 17:37:39.605636"], ["user_id", 1]]
+  ↳ app/controllers/music_controller.rb:70
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:71
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:71
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_controller.rb:72
+Redirected to http://localhost:3000/music/10
+Completed 302 Found in 303ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/music/10" for 127.0.0.1 at 2020-06-25 19:37:39 +0200
+Processing by MusicController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMusic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:86
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/music_controller.rb:87
+  Rendering music/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:34
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."music_id" = ? LIMIT ?[0m  [["user_id", 1], ["music_id", 10], ["LIMIT", 1]]
+  ↳ app/views/music/show.html.haml:44
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."music_id" = ?[0m  [["music_id", 10]]
+  ↳ app/views/music/show.html.haml:59
+  Rendered music/show.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music" for 127.0.0.1 at 2020-06-25 19:37:54 +0200
+Processing by MusicController#index as HTML
+  Rendering music/index.html.haml within layouts/application
+  [1m[36mMusic Load (0.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/music/index.html.haml:15
+  Rendered music/index.html.haml within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorite" for 127.0.0.1 at 2020-06-25 19:38:02 +0200
+Processing by Music::FavoritesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/grandozen/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering music/favorites/show.html.haml within layouts/application
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/music/favorites/show.html.haml:15
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/music/favorites/show.html.haml:17
+  [1m[36mMusic Load (0.1ms)[0m  [1m[34mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/music/favorites/show.html.haml:17
+  Rendered music/favorites/show.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2020-06-25 19:38:30 +0200
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  Rendering user/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/user/index.html.haml:5
+  Rendered user/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/2" for 127.0.0.1 at 2020-06-25 19:38:59 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13
+  Rendering user/show.html.haml within layouts/application
+  Rendered user/show.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 95ms (Views: 83.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 19:40:15 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 96ms (Views: 93.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-06-25 19:41:13 +0200
+Processing by OtherController#contact as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:11
+  Rendering other/contact.html.haml within layouts/application
+  Rendered other/contact.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2020-06-25 19:41:42 +0200
+Processing by OtherController#sendMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"krkqDwncvIrK7XOThGQAkkskzleeZqElaLfNmg0cKrGH5+dlYhbkGAv5EfuzeDj6MSbxdDX/gO+ajuiNWm0cmA==", "send"=>{"msgType"=>"Track not appropriete", "msg"=>"prova"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/other_controller.rb:21
+  Rendering to_developers_mailer/toDev.html.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.html.haml within layouts/mailer (4.3ms)
+  Rendering to_developers_mailer/toDev.text.haml within layouts/mailer
+  Rendered to_developers_mailer/toDev.text.haml within layouts/mailer (1.8ms)
+ToDevelopersMailer#toDev: processed outbound mail in 30.0ms
+Sent mail to testing@developers.mail (14.3ms)
+Date: Thu, 25 Jun 2020 19:41:42 +0200
+From: admin@admin.admin
+To: testing@developers.mail
+Message-ID: <5ef4e1d6bee3_1c9f2b13906c1f3c79788@grandozen-VBDesk.mail>
+Subject: Musicman mail -> Track not appropriete (from: admin@admin.admin)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ef4e1d67db1_1c9f2b13906c1f3c7964e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ef4e1d67db1_1c9f2b13906c1f3c7964e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Topic: <%= @type %>
+============================================
+From <%= @user.email %>
+============================================
+Message: <%= @msg %>
+
+
+----==_mimepart_5ef4e1d67db1_1c9f2b13906c1f3c7964e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>
+Topic: Track not appropriete
+</h3>
+<h5>
+From admin@admin.admin
+</h5>
+<p>
+Message: prova
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5ef4e1d67db1_1c9f2b13906c1f3c7964e--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 50ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2020-06-25 19:41:42 +0200
+Processing by OtherController#about as HTML
+  Rendering other/about.html.haml within layouts/application
+  Rendered other/about.html.haml within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
