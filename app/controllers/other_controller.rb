@@ -1,9 +1,9 @@
 class OtherController < ApplicationController
     
     def about        
-        @dev01 = {:name => "name", :surname => "surname", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Christian Realin Ramilo"}
-        @dev02 = {:name => "name", :surname => "surname", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Giovanni Giunti"}
-        @dev03 = {:name => "name", :surname => "surname", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Giancarlo Liu"}
+        @dev01 = {:name => "Christian Realin", :surname => "Ramilo", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Christian Realin Ramilo"}
+        @dev02 = {:name => "Giovanni", :surname => "Giunti", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Giovanni Giunti"}
+        @dev03 = {:name => "Giancarlo", :surname => "Liu", :pic => "https://www.kindpng.com/picc/b/11/113191.png", :description => "Giancarlo Liu"}
         @listDev = [@dev01, @dev02, @dev03]
     end
 
